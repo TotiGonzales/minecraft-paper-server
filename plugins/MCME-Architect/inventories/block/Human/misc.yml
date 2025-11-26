@@ -1,0 +1,992 @@
+Items:
+  # gray collection
+  white_wool:
+    itemMaterial: WHITE_WOOL
+    cmd: 0
+    display: White wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      A1: carpet_white
+      A0: white_wool
+      F0: banner_white
+      G2: carpet_silver
+      H2: silver_wool
+      I2: banner_silver
+      J1: carpet_gray
+      E0: gray_wool
+      E1: banner_gray
+      B2: banner_black
+      C2: black_wool
+      D2: carpet_black
+      F4: orange_wool
+      G4: magenta_wool
+      H4: note_block_piano_3
+      I4: blue_wool
+      J4: green_wool
+  silver_wool:
+    itemMaterial: LIGHT_GRAY_WOOL
+    cmd: 8
+    display: light gray wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  gray_wool:
+    itemMaterial: GRAY_WOOL
+    cmd: 7
+    display: Dark gray wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  black_wool:
+    itemMaterial: BLACK_WOOL
+    cmd: 15
+    display: Black wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  
+  
+  # orange collection
+  yellow_wool:
+    itemMaterial: YELLOW_WOOL
+    cmd: 4
+    display: Yellow wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      A1: carpet_yellow
+      A0: yellow_wool
+      F1: banner_yellow
+      H2: carpet_orange
+      I2: orange_wool
+      J1: banner_orange
+      E1: carpet_red
+      D2: red_wool
+      C2: banner_red
+      F4: silver_wool
+      G4: magenta_wool
+      H4: note_block_piano_3
+      I4: blue_wool
+      J4: green_wool
+  orange_wool:
+    itemMaterial: ORANGE_WOOL
+    cmd: 1
+    display: Orange wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: yellow_wool
+  red_wool:
+    itemMaterial: RED_WOOL
+    cmd: 14
+    display: Red wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: yellow_wool
+  
+  
+  # magenta collection
+  pink_wool:
+    itemMaterial: PINK_WOOL
+    cmd: 6
+    display: Pink wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      A1: carpet_pink
+      A0: pink_wool
+      F1: banner_pink
+      H2: carpet_magenta
+      I2: magenta_wool
+      J1: banner_magenta
+      E1: carpet_purple
+      D2: purple_wool
+      C2: banner_purple
+      F4: silver_wool
+      G4: orange_wool
+      H4: note_block_piano_3
+      I4: blue_wool
+      J4: green_wool
+  magenta_wool:
+    itemMaterial: MAGENTA_WOOL
+    cmd: 2
+    display: Magenta wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: pink_wool
+  purple_wool:
+    itemMaterial: PURPLE_WOOL
+    cmd: 10
+    display: Purple wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: pink_wool
+  
+  
+  # blue collection
+  light_blue_wool:
+    itemMaterial: LIGHT_BLUE_WOOL
+    cmd: 3
+    display: Light wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      A1: carpet_light_blue
+      A0: light_blue_wool
+      F1: banner_light_blue
+      H2: carpet_cyan
+      I2: cyan_wool
+      J1: banner_cyan
+      E1: carpet_blue
+      D2: blue_wool
+      C2: banner_blue
+      F4: silver_wool
+      G4: orange_wool
+      H4: note_block_piano_3
+      I4: magenta_wool
+      J4: green_wool
+  cyan_wool:
+    itemMaterial: CYAN_WOOL
+    cmd: 9
+    display: Cyan wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: light_blue_wool
+  blue_wool:
+    itemMaterial: BLUE_WOOL
+    cmd: 11
+    display: Blue wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: light_blue_wool
+  candycane:
+    itemMaterial: CLAY_BALL
+    cmd: 1054
+    display: Tall Candycanes
+    category: Misc
+    type: FOUR_DIRECTIONS
+    blockDataNorth: minecraft:bamboo[age=0,leaves=small,stage=1]
+    blockDataSouth: minecraft:bamboo[age=1,leaves=none,stage=1]
+    blockDataEast: minecraft:bamboo[age=0,leaves=large,stage=1]
+    blockDataWest: minecraft:bamboo[age=0,leaves=none,stage=1]
+    collection:
+      A0: candycane
+      A1: wreath
+      F1: candycane_ground
+      B2: candycane_cross
+      C2: xmas_tree
+      D2: xmas_bow
+      E0: xmas_sock
+      E1: presents
+  presents:
+    itemMaterial: CLAY_BALL
+    cmd: 1055
+    display: Presents
+    category: Misc
+    type: BLOCK
+    blockData: minecraft:pumpkin
+    collection:
+      indirect: candycane
+  xmas_sock:
+    itemMaterial: CLAY_BALL
+    cmd: 1053
+    display: Stockings
+    category: Misc
+    type: FOUR_DIRECTIONS
+    blockDataNorth: minecraft:oxidized_copper_trapdoor[facing=south,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataSouth: minecraft:oxidized_copper_trapdoor[facing=north,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataEast: minecraft:oxidized_copper_trapdoor[facing=west,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataWest: minecraft:oxidized_copper_trapdoor[facing=east,half=bottom,open=true,powered=false,waterlogged=false]
+    collection:
+      indirect: candycane
+  xmas_bow:
+    itemMaterial: CLAY_BALL
+    cmd: 1049
+    display: Bow
+    type: FOUR_DIRECTIONS
+    blockDataNorth: minecraft:oxidized_copper_trapdoor[facing=south,half=top,open=true,powered=true,waterlogged=false]
+    blockDataSouth: minecraft:oxidized_copper_trapdoor[facing=north,half=top,open=true,powered=true,waterlogged=false]
+    blockDataEast: minecraft:oxidized_copper_trapdoor[facing=west,half=top,open=true,powered=true,waterlogged=false]
+    blockDataWest: minecraft:oxidized_copper_trapdoor[facing=east,half=top,open=true,powered=true,waterlogged=false]
+    collection:
+      indirect: candycane
+  wreath:
+    itemMaterial: CLAY_BALL
+    cmd: 1051
+    display: Wreath
+    type: FOUR_DIRECTIONS
+    blockDataNorth: minecraft:oxidized_copper_trapdoor[facing=south,half=bottom,open=true,powered=true,waterlogged=false]
+    blockDataSouth: minecraft:oxidized_copper_trapdoor[facing=north,half=bottom,open=true,powered=true,waterlogged=false]
+    blockDataEast: minecraft:oxidized_copper_trapdoor[facing=west,half=bottom,open=true,powered=true,waterlogged=false]
+    blockDataWest: minecraft:oxidized_copper_trapdoor[facing=east,half=bottom,open=true,powered=true,waterlogged=false]
+    collection:
+      indirect: candycane
+  candycane_ground:
+    itemMaterial: Clay_Ball
+    cmd: 1050
+    display: Candycane GROUND
+    type: BLOCK
+    blockData: minecraft:oxidized_copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    collection:
+      indirect: candycane
+  xmas_tree:
+    itemMaterial: Clay_Ball
+    cmd: 1048
+    display: Christmas Tree
+    type: BLOCK
+    blockData: minecraft:cave_vines[age=18,berries=false]
+    collection:
+      indirect: candycane
+  candycane_cross:
+    itemMaterial: CLAY_BALL
+    cmd: 1052
+    display: Candycane Cross
+    type: FOUR_DIRECTIONS
+    blockDataNorth: minecraft:oxidized_copper_trapdoor[facing=south,half=top,open=true,powered=false,waterlogged=false]
+    blockDataSouth: minecraft:oxidized_copper_trapdoor[facing=north,half=top,open=true,powered=false,waterlogged=false]
+    blockDataEast: minecraft:oxidized_copper_trapdoor[facing=west,half=top,open=true,powered=false,waterlogged=false]
+    blockDataWest: minecraft:oxidized_copper_trapdoor[facing=east,half=top,open=true,powered=false,waterlogged=false]
+    collection:
+      indirect: candycane
+  
+  # green/brown collection
+  lime_wool:
+    itemMaterial: LIME_WOOL
+    cmd: 5
+    display: Lime wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      A1: carpet_lime
+      A0: lime_wool
+      F1: banner_lime
+      H2: carpet_green
+      I2: green_wool
+      J1: banner_green
+      E1: carpet_brown
+      D2: brown_wool
+      C2: banner_brown
+      F4: silver_wool
+      G4: orange_wool
+      H4: note_block_piano_3
+      I4: magenta_wool
+      J4: blue_wool
+  green_wool:
+    itemMaterial: GREEN_WOOL
+    cmd: 13
+    display: Green wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: lime_wool
+  brown_wool:
+    itemMaterial: BROWN_WOOL
+    cmd: 12
+    display: Brown wool block
+    category: Misc
+    type: VANILLA
+    collection:
+      indirect: lime_wool
+  
+  
+  # marker collection
+  sign:
+    itemMaterial: OAK_SIGN
+    cmd: 0
+    display: Sign [63:0]
+    category: Misc
+    type: VANILLA
+    collection:
+      A1: note_block_piano_0
+      F1: note_block_piano_2
+      H2: note_block_piano_3
+      J1: note_block_piano_5
+      E1: note_block_piano_4
+      C2: note_block_piano_1
+      C0: sign
+      F4: silver_wool
+      G4: orange_wool
+      H4: magenta_wool
+      I4: blue_wool
+      J4: green_wool
+      A4: invis_sign
+      B4: invis_itemframe
+  barrel_icon:
+    itemMaterial: CLAY_Ball
+    cmd: 865
+    display: Barrel Icon
+    category: Misc
+    type: ITEM_FRAME
+    collection:
+      A1: barrel_icon
+      A2: barrel_wall_icon
+      B1: coins_icon
+      B2: coins_wall_icon
+      C1: beer_icon
+      C2: beer_wall_icon
+      D1: blacksmith_icon
+      D2: blacksmith_wall_icon
+      E1: cauldron_icon
+      E2: cauldron_wall_icon
+      F1: fish_icon
+      F2: fish_wall_icon
+      G1: horseshoe_icon
+      G2: horseshoe_wall_icon
+      H1: jar_icon
+      H2: jar_wall_icon
+      I1: needlethread_icon
+      I2: needlethread_wall_icon
+      J1: plant_icon
+      J2: plant_wall_icon
+      A3: barrel_large_wall_icon
+      B3: coins_large_wall_icon
+      C3: beer_large_wall_icon
+      D3: blacksmith_large_wall_icon
+      E3: cauldron_large_wall_icon
+      F3: fish_large_wall_icon
+      G3: horseshoe_large_wall_icon
+      H3: jar_large_wall_icon
+      I3: needlethread_large_wall_icon
+      J3: plant_large_wall_icon
+  barrel_wall_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 882
+    display: Barrel Wall Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  coins_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 861
+    display: Coins Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  coins_wall_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 883
+    display: Coins Wall Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  beer_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 874
+    display: Beer Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  beer_wall_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 884
+    display: Beer Wall Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  blacksmith_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 875
+    display: Blacksmit Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  blacksmith_wall_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 885
+    display: Blacksmit Wall Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  cauldron_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 876
+    display: Cauldron Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  cauldron_wall_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 886
+    display: Cauldron Wall Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  fish_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 877
+    display: Fish Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  fish_wall_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 887
+    display: Fish Wall Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  horseshoe_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 878
+    display: Horseshoe Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  horseshoe_wall_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 888
+    display: Horseshoe Wall Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  jar_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 879
+    display: Jar Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  jar_wall_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 889
+    display: Jar Wall Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  needlethread_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 880
+    display: Needlethread Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  needlethread_wall_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 890
+    display: Needlethread Wall Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  plant_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 881
+    display: Plant Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  plant_wall_icon:
+    itemMaterial: CLAY_BALL
+    cmd: 895
+    display: Plant Wall Icon
+    type: ITEM_FRAME
+    collection:
+      indirect: barrel_icon
+  note_block_piano_0:
+    itemMaterial: CLAY_BALL
+    cmd: 100
+    display: Marker Accepted
+    category: Misc
+    blockData: minecraft:note_block[instrument=harp,note=0,powered=false]
+    type: BLOCK
+    collection:
+      indirect: sign
+  note_block_piano_1:
+    blockDataValue: 0
+    itemMaterial: CLAY_BALL
+    cmd: 101
+    display: Marker Declined
+    category: Misc
+    blockData: minecraft:note_block[instrument=harp,note=1,powered=false]
+    type: BLOCK
+    collection:
+      indirect: sign
+  note_block_piano_2:
+    blockDataValue: 0
+    itemMaterial: CLAY_BALL
+    cmd: 102
+    display: Marker Finished
+    category: Misc
+    blockData: minecraft:note_block[instrument=harp,note=2,powered=false]
+    type: BLOCK
+    collection:
+      indirect: sign
+  note_block_piano_3:
+    blockDataValue: 0
+    itemMaterial: CLAY_BALL
+    cmd: 103
+    display: Marker WIP
+    category: Misc
+    blockData: minecraft:note_block[instrument=harp,note=3,powered=false]
+    type: BLOCK
+    collection:
+      indirect: sign
+  note_block_piano_4:
+    blockDataValue: 0
+    itemMaterial: CLAY_BALL
+    cmd: 104
+    display: Marker Comment
+    category: Misc
+    blockData: minecraft:note_block[instrument=harp,note=4,powered=false]
+    type: BLOCK
+    collection:
+      indirect: sign
+  note_block_piano_5:
+    blockDataValue: 1
+    itemMaterial: CLAY_BALL
+    cmd: 105
+    display: Marker Info
+    category: Misc
+    blockData: minecraft:note_block[instrument=harp,note=5,powered=false]
+    type: BLOCK
+    collection:
+      indirect: sign
+  
+  # misc blocks/items
+  glowstone:
+    itemMaterial: GLOWSTONE
+    cmd: 0
+    display: Glowing stone
+    category: Misc
+    type: VANILLA
+  fancy_block:
+    itemMaterial: HONEYCOMB_BLOCK
+    cmd: 0
+    display: Star Block
+    category: Misc
+    type: VANILLA
+  elven_block:
+    itemMaterial: LAPIS_BLOCK
+    cmd: 0
+    display: Elven Deco Block
+    category: Misc
+    type: VANILLA
+  elven_block_thin:
+    itemMaterial: CLAY_BALL
+    cmd: 460
+    display: Elven Deco Block thin
+    category: Misc
+    type: BLOCK
+    blockData: minecraft:repeater[delay=1,facing=east,locked=true,powered=true]
+  dragon_egg:
+    itemMaterial: DRAGON_EGG
+    cmd: 0
+    display: Palantir
+    category: Misc
+    type: VANILLA
+  tnt:
+    itemMaterial: TNT
+    cmd: 0
+    display: Fireworks
+    category: Misc
+    type: VANILLA
+  portal:
+    itemMaterial: CLAY_BALL
+    cmd: 145
+    display: Eye of Sauron
+    category: Misc
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:nether_portal[axis=x]
+    blockDataWest: minecraft:nether_portal[axis=z]
+    blockDataNorth: minecraft:nether_portal[axis=x]
+    blockDataEast: minecraft:nether_portal[axis=z]
+  fire:
+    itemMaterial: CLAY_BALL
+    cmd: 286
+    display: Fire
+    category: Misc
+    type: BLOCK
+    blockData: minecraft:fire[age=0,east=false,north=false,south=false,up=false,west=false]
+  gondor_inv_opener:
+    itemMaterial: GOLDEN_HELMET
+    cmd: 33
+    display: Gondor (hold in hand and press 'f')
+    category: Misc
+    type: VANILLA
+  heads_inv_opener:
+    itemMaterial: GOLDEN_HELMET
+    cmd: 34
+    display: Head Inventory (hold in hand and press 'f')
+    category: Misc
+    type: VANILLA
+  
+  
+  # inside collections
+  banner_white:
+    itemMaterial: WHITE_BANNER
+    cmd: 15
+    display: White Banner
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  banner_yellow:
+    itemMaterial: YELLOW_BANNER
+    cmd: 11
+    display: Yellow Banner
+    type: VANILLA
+    collection:
+      indirect: yellow_wool
+  banner_orange:
+    itemMaterial: ORANGE_BANNER
+    cmd: 14
+    display: Orange Banner
+    type: VANILLA
+    collection:
+      indirect: yellow_wool
+  banner_pink:
+    itemMaterial: PINK_BANNER
+    cmd: 9
+    display: Pink Banner
+    type: VANILLA
+    collection:
+      indirect: pink_wool
+  banner_red:
+    itemMaterial: RED_BANNER
+    cmd: 1
+    display: Red Banner
+    type: VANILLA
+    collection:
+      indirect: yellow_wool
+  banner_magenta:
+    itemMaterial: MAGENTA_BANNER
+    cmd: 13
+    display: Magenta Banner
+    type: VANILLA
+    collection:
+      indirect: pink_wool
+  banner_purple:
+    itemMaterial: PURPLE_BANNER
+    cmd: 5
+    display: Purple Banner
+    type: VANILLA
+    collection:
+      indirect: pink_wool
+  banner_blue:
+    itemMaterial: BLUE_BANNER
+    cmd: 4
+    display: Blue Banner
+    type: VANILLA
+    collection:
+      indirect: light_blue_wool
+  banner_light_blue:
+    itemMaterial: LIGHT_BLUE_BANNER
+    cmd: 12
+    display: Light Blue Banner
+    type: VANILLA
+    collection:
+      indirect: light_blue_wool
+  banner_cyan:
+    itemMaterial: CYAN_BANNER
+    cmd: 6
+    display: Cyan Banner
+    type: VANILLA
+    collection:
+      indirect: light_blue_wool
+  banner_green:
+    itemMaterial: GREEN_BANNER
+    cmd: 2
+    display: Green Banner
+    type: VANILLA
+    collection:
+      indirect: lime_wool
+  banner_lime:
+    itemMaterial: LIME_BANNER
+    cmd: 10
+    display: Lime Banner
+    type: VANILLA
+    collection:
+      indirect: lime_wool
+  banner_brown:
+    itemMaterial: BROWN_BANNER
+    cmd: 3
+    display: Brown Banner
+    type: VANILLA
+    collection:
+      indirect: lime_wool
+  banner_silver:
+    itemMaterial: LIGHT_GRAY_BANNER
+    cmd: 7
+    display: Silver Banner
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  banner_gray:
+    itemMaterial: GRAY_BANNER
+    cmd: 8
+    display: Gray Banner
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  banner_black:
+    itemMaterial: BLACK_BANNER
+    cmd: 0
+    display: Black Banner
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  carpet_white:
+    itemMaterial: WHITE_CARPET
+    cmd: 0
+    display: White Carpet
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  carpet_yellow:
+    itemMaterial: YELLOW_CARPET
+    cmd: 4
+    display: Yellow Carpet
+    type: VANILLA
+    collection:
+      indirect: yellow_wool
+  carpet_orange:
+    itemMaterial: ORANGE_CARPET
+    cmd: 1
+    display: Orange Carpet
+    type: VANILLA
+    collection:
+      indirect: yellow_wool
+  carpet_pink:
+    itemMaterial: PINK_CARPET
+    cmd: 6
+    display: Pink Carpet
+    type: VANILLA
+    collection:
+      indirect: pink_wool
+  carpet_red:
+    itemMaterial: RED_CARPET
+    cmd: 14
+    display: Red Carpet
+    type: VANILLA
+    collection:
+      indirect: yellow_wool
+  carpet_magenta:
+    itemMaterial: MAGENTA_CARPET
+    cmd: 2
+    display: Magenta Carpet
+    type: VANILLA
+    collection:
+      indirect: pink_wool
+  carpet_purple:
+    itemMaterial: PURPLE_CARPET
+    cmd: 10
+    display: Purple Carpet
+    type: VANILLA
+    collection:
+      indirect: pink_wool
+  carpet_blue:
+    itemMaterial: BLUE_CARPET
+    cmd: 11
+    display: Blue Carpet
+    type: VANILLA
+    collection:
+      indirect: light_blue_wool
+  carpet_light_blue:
+    itemMaterial: LIGHT_BLUE_CARPET
+    cmd: 3
+    display: Light Blue Carpet
+    type: VANILLA
+    collection:
+      indirect: light_blue_wool
+  carpet_cyan:
+    itemMaterial: CYAN_CARPET
+    cmd: 9
+    display: Cyan Carpet
+    type: VANILLA
+    collection:
+      indirect: light_blue_wool
+  carpet_green:
+    itemMaterial: GREEN_CARPET
+    cmd: 13
+    display: Green Carpet
+    type: VANILLA
+    collection:
+      indirect: lime_wool
+  carpet_lime:
+    itemMaterial: LIME_CARPET
+    cmd: 5
+    display: Lime Carpet
+    type: VANILLA
+    collection:
+      indirect: lime_wool
+  carpet_brown:
+    itemMaterial: BROWN_CARPET
+    cmd: 12
+    display: Brown Carpet
+    type: VANILLA
+    collection:
+      indirect: lime_wool
+  carpet_silver:
+    itemMaterial: LIGHT_GRAY_CARPET
+    cmd: 8
+    display: Silver Carpet
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  carpet_gray:
+    itemMaterial: GRAY_CARPET
+    cmd: 7
+    display: Gray Carpet
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  carpet_black:
+    itemMaterial: BLACK_CARPET
+    cmd: 15
+    display: Black Carpet
+    type: VANILLA
+    collection:
+      indirect: white_wool
+  flint:
+    itemMaterial: FLINT
+    cmd: 0
+    display: Get Block Tool
+    category: Misc
+    collection:
+      A1: flint
+      F1: prismarine_crystal
+      G2: ghast_tear
+      I2: torch_hand
+      J1: axe
+      E1: blaze_rod
+      D2: gunpowder
+      B2: arrow
+  prismarine_crystal:
+    itemMaterial: PRISMARINE_CRYSTALS
+    cmd: 0
+    display: Fix Lighting Tool
+    category: Misc
+    collection:
+      indirect: flint
+  axe:
+    itemMaterial: WOODEN_AXE
+    cmd: 0
+    display: World Edit Wand
+    category: Misc
+    collection:
+      indirect: flint
+  arrow:
+    itemMaterial: ARROW
+    cmd: 0
+    display: Voxel Place
+    category: Misc
+    collection:
+      indirect: flint
+  gunpowder:
+    itemMaterial: GUNPOWDER
+    cmd: 0
+    display: Voxel Remove
+    category: Misc
+    collection:
+      indirect: flint
+  torch_hand:
+    itemMaterial: TORCH
+    cmd: 0
+    display: Torch
+    category: Misc
+    collection:
+      indirect: flint
+  ghast_tear:
+    itemMaterial: GHAST_TEAR
+    cmd: 0
+    display: Sitting Tool (Requires perk)
+    category: Misc
+    collection:
+      indirect: flint
+  blaze_rod:
+    itemMaterial: BLAZE_ROD
+    cmd: 0
+    display: Animation Tool
+    category: Misc
+    collection:
+      indirect: flint
+  light:
+    itemMaterial: LIGHT
+    display: Light Block
+    type: VANILLA
+    blockData: minecraft:light
+    category: Misc
+  invis_sign:
+    display: Invisible Sign
+    type: SIGN
+    material: dark_oak
+    itemMaterial: DARK_OAK_SIGN
+    collection:
+      indirect: sign
+  barrel_large_wall_icon:
+    display: Large Barrel Wall Icon
+    type: ITEM_FRAME
+    itemMaterial: CLAY_BALL
+    cmd: 894
+    collection:
+      indirect: barrel_icon
+  coins_large_wall_icon:
+    display: Large Coins Wall Icon
+    type: ITEM_FRAME
+    itemMaterial: CLAY_BALL
+    cmd: 905
+    collection:
+      indirect: barrel_icon
+  beer_large_wall_icon:
+    display: Large Beer Wall Icon
+    type: ITEM_FRAME
+    itemMaterial: CLAY_BALL
+    cmd: 906
+    collection:
+      indirect: barrel_icon
+  blacksmith_large_wall_icon:
+    display: Large Blacksmith Wall Icon
+    type: ITEM_FRAME
+    itemMaterial: CLAY_BALL
+    cmd: 907
+    collection:
+      indirect: barrel_icon
+  cauldron_large_wall_icon:
+    display: Large Cauldron Wall Icon
+    type: ITEM_FRAME
+    itemMaterial: CLAY_BALL
+    cmd: 908
+    collection:
+      indirect: barrel_icon
+  fish_large_wall_icon:
+    display: Large Fish Wall Icon
+    type: ITEM_FRAME
+    itemMaterial: CLAY_BALL
+    cmd: 909
+    collection:
+      indirect: barrel_icon
+  horseshoe_large_wall_icon:
+    display: Large Horseshoe Wall Icon
+    type: ITEM_FRAME
+    itemMaterial: CLAY_BALL
+    cmd: 910
+    collection:
+      indirect: barrel_icon
+  jar_large_wall_icon:
+    display: Large Jar Wall Icon
+    type: ITEM_FRAME
+    itemMaterial: CLAY_BALL
+    cmd: 911
+    collection:
+      indirect: barrel_icon
+  needlethread_large_wall_icon:
+    display: Large Needlethread Wall Icon
+    type: ITEM_FRAME
+    itemMaterial: CLAY_BALL
+    cmd: 912
+    collection:
+      indirect: barrel_icon
+  plant_large_wall_icon:
+    display: Large Plant Wall Icon
+    type: ITEM_FRAME
+    itemMaterial: CLAY_BALL
+    cmd: 913
+    collection:
+      indirect: barrel_icon

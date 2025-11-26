@@ -1,0 +1,120 @@
+DefaultConfiguration: Values in this file will be used for all worlds if not overriden
+  in <worldName>.yml configuration file.
+modules:
+  specialBlocks:
+    redstoneTorch: true
+    halfDoors: true
+    halfBeds: true
+    doubleSlabs: true
+    plants: true
+    pistonExtenstions: true
+    sixSidedLogs: true
+    dragonEgg: true
+    burningFurnace: true
+    inventoryAccess: true
+    place: true
+    flint: true
+    poweredDoors: true
+    blockPlayerInteraction: true
+  environment:
+    playerSurvivalFly: true
+    playerDamageBlocking: true
+    animalSpawnBlocking: true
+    dropBlocking: true
+    monsterSpawnBlocking: true
+    fireSpreadBlocking: true
+    weatherBlocking: true
+    decayBlocking: true
+    formBlocking: true
+    fadeBlocking: true
+    noPhysicsListEnabled: true
+    noPhysicsListInverted: true
+    noPhysicsConnectStairs: true
+    noPhysicsConnectFences: true
+    noPhysicsConnectWalls: true
+    noPhysicsConnectChorus: true
+    noPhysicsConnectChests: true
+    noPhysicsConnectGlass: true
+    noPhysicsConnectRedstoneWire: true
+    drainWaterloggedDoubleSlabs: true
+  command:
+    signEditor: true
+    customHeadManager: true
+    resourcePackSwitcher: true
+    fullBrightness: true
+    getSpecialBlocks: true
+    weSchemViewer: true
+    voxelViewer: true
+    stencilListEditor: true
+    bannerEditor: true
+    paintingEditor: true
+    cycleBlocks: true
+    armorStandEditor: true
+    armorStandRollback: true
+    randomiser: true
+    copypaste: true
+    viewdistance: true
+  commmand:
+    itemTexture: true
+  voxelBiomeBrushFix: true
+  chunkupdate:
+    manual: true
+    auto: true
+  protection:
+    removeContainerItemsOnBreak: true
+    blockOpItems: true
+    blockArrowShooting: true
+    armorStand: true
+    lilyPad: true
+    redstone: true
+    chestInventory: true
+    tnt: true
+    hangingEntity: true
+noPhysicsList: []
+viewDistance: 255
+armorStand:
+  maxScale: 16.0
+  minScale: 0.0625
+inventoryAccess:
+  ANVIL: 'TRUE'
+  BEACON: EXCEPTION
+  BREWING: BUILDER
+  CHEST: 'TRUE'
+  CRAFTING: 'TRUE'
+  CREATIVE: 'TRUE'
+  DISPENSER: EXCEPTION
+  DROPPER: EXCEPTION
+  ENCHANTING: EXCEPTION
+  ENDER_CHEST: 'TRUE'
+  FURNACE: BUILDER
+  HOPPER: EXCEPTION
+  PLAYER: 'TRUE'
+  WORKBENCH: 'TRUE'
+  MERCHANT: 'TRUE'
+  SHULKER_BOX:
+    default: 'TRUE'
+noInteraction:
+- minecraft:acacia_fence_gate
+- minecraft:birch_fence_gate[powered=true]
+- minecraft:jungle_fence_gate
+- minecraft:dark_oak_fence_gate
+- minecraft:spruce_fence_gate
+- minecraft:acacia_door[powered=false]
+- minecraft:jungle_door[powered=false]
+- minecraft:dark_oak_door[powered=false]
+- minecraft:spruce_door[powered=false]
+- minecraft:repeater
+- minecraft:comparator
+noConnection:
+- minecraft:red_sandstone_wall
+- minecraft:andesite_wall
+- minecraft:prismarine_wall
+allowedEnchantments:
+  Durability: 1
+doubleSlabReplacements:
+  gondor:
+    Example:
+      from: minecraft:acacia_slab[type=bottom,waterlogged=false]
+      to: minecraft:acacia_planks
+disabledBlockStates:
+- minecraft:blue_stained_glass_pane[east=false,north=false,south=false,west=false]

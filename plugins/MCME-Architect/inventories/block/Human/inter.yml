@@ -1,0 +1,1661 @@
+Items:
+  
+  # storage collection
+  chest:
+    itemMaterial: CHEST
+    cmd: 0
+    display: Chest
+    category: Inter
+    type: VANILLA
+    collection:
+      A1: trapped_chest
+      A0: chest
+      F1: ender_chest
+      G2: double_slab_planks_oak
+      I2: prismarine_rough
+      J1: bookshelf
+      E1: round_barrel
+      D2: double_slab_planks_spruce
+      B2: double_slab_planks_birch
+      F4: bottle_1
+      G4: plate_1_regular
+      H4: lit_redstone_torch
+      I4: piston_head_normal
+      J4: bed_orange
+      G3: repeater_delay1_s_l
+      C2: small_crates
+      H2: composter
+      E0: blue_candle_cake
+      A4: crate_broken
+      B4: wheat_crate
+      C4: hops_crate
+  hops_crate:
+    itemMaterial: BRICK
+    cmd: 480
+    display: Crate with Hops
+    type: BLOCK
+    blockData: minecraft:composter[level=2]
+    collection:
+      indirect: chest
+  wheat_crate:
+    itemMaterial: BRICK
+    cmd: 480
+    display: Crate with Wheat
+    type: BLOCK
+    blockData: minecraft:composter[level=1]
+    collection:
+      indirect: chest
+  crate_broken:
+    itemMaterial: BRICK
+    cmd: 493
+    display: Broken Crate
+    type: BLOCK
+    blockData: minecraft:black_candle_cake[lit=false]
+    collection:
+      indirect: chest
+  blue_candle_cake:
+    itemMaterial: BRICK
+    cmd: 485
+    display: Big Thatch Basket
+    type: BLOCK
+    blockData: minecraft:blue_candle_cake[lit=false]
+    collection:
+      indirect: chest
+  composter:
+    itemMaterial: BRICK
+    cmd: 480
+    display: Composter
+    type: BLOCK
+    blockData: minecraft:composter[level=0]
+    collection:
+      indirect: chest
+  small_crates:
+    itemMaterial: BRICK
+    cmd: 476
+    display: Small Crates
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:magenta_candle_cake[lit=false]
+    blockDataWest: minecraft:purple_candle_cake[lit=false]
+    blockDataNorth: minecraft:magenta_candle_cake[lit=false]
+    blockDataEast: minecraft:purple_candle_cake[lit=false]
+    collection:
+      indirect: chest
+  double_slab_planks_oak:
+    itemMaterial: CLAY_BALL
+    cmd: 163
+    display: Crate
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:oak_slab[type=double,waterlogged=false]
+    collection:
+      indirect: chest
+  repeater_delay1_s_l:
+    itemMaterial: CLAY_BALL
+    cmd: 445
+    display: Crate Thin
+    type: BLOCK
+    blockData: minecraft:repeater[delay=1,facing=south,locked=true,powered=false]
+    collection:
+      indirect: chest
+  double_slab_planks_birch:
+    itemMaterial: CLAY_BALL
+    cmd: 164
+    display: Crate
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:birch_slab[type=double,waterlogged=false]
+    collection:
+      indirect: chest
+  bookshelf:
+    itemMaterial: BOOKSHELF
+    cmd: 0
+    display: Barrel
+    category: Inter
+    type: VANILLA
+    collection:
+      indirect: chest
+  # inside collection
+  trapped_chest:
+    itemMaterial: TRAPPED_CHEST
+    cmd: 0
+    display: Chest
+    type: VANILLA
+    collection:
+      indirect: chest
+  ender_chest:
+    itemMaterial: ENDER_CHEST
+    cmd: 0
+    display: Chest
+    type: VANILLA
+    collection:
+      indirect: chest
+  prismarine_rough:
+    itemMaterial: PRISMARINE
+    dataValue: 0
+    display: Sturdy Crate
+    type: VANILLA
+    collection:
+      indirect: chest
+  double_slab_planks_spruce:
+    itemMaterial: CLAY_BALL
+    cmd: 165
+    display: Crate
+    type: BLOCK
+    blockData: minecraft:spruce_slab[type=double,waterlogged=false]
+    collection:
+      indirect: chest
+  
+  
+  # books/library collecton
+  double_slab_wood_old:
+    itemMaterial: CLAY_BALL
+    cmd: 166
+    display: Bookshelf
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:petrified_oak_slab[type=double,waterlogged=false]
+    blockDataWest: minecraft:emerald_block
+    blockDataNorth: minecraft:petrified_oak_slab[type=double,waterlogged=false]
+    blockDataEast: minecraft:emerald_block
+    collection:
+      G2: brown_shulker_box
+      J1: cocoa_age2_s
+      E1: cocoa_age1_s
+      E0: cocoa_age0_s
+      C2: light_bookshelf
+      A0: scrolls
+      A1: stacked_books
+      F1: papers
+      B2: hanging_papers
+      D2: paper_stack
+      H2: lectern
+      I2: fancy_lectern
+      F4: paper_and_quill
+  paper_stack:
+    itemMaterial: CLAY_BALL
+    cmd: 919
+    display: Paper Stack
+    type: BLOCK
+    blockData: minecraft:heavy_weighted_pressure_plate[power=6]
+    collection:
+      indirect: double_slab_wood_old
+  hanging_papers:
+    itemMaterial: BRICK
+    cmd: 516
+    display: Hanging Papers
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:acacia_button[face=wall,facing=north,powered=true]
+    blockDataWest: minecraft:acacia_button[face=wall,facing=east,powered=true]
+    blockDataNorth: minecraft:acacia_button[face=wall,facing=south,powered=true]
+    blockDataEast: minecraft:acacia_button[face=wall,facing=west,powered=true]
+    collection:
+      indirect: double_slab_wood_old
+  papers:
+    itemMaterial: BRICK
+    cmd: 440
+    display: Papers
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:crimson_button[face=floor,facing=north,powered=false]
+    blockDataWest: minecraft:crimson_button[face=floor,facing=east,powered=false]
+    blockDataNorth: minecraft:crimson_button[face=floor,facing=north,powered=false]
+    blockDataEast: minecraft:crimson_button[face=floor,facing=east,powered=false]
+    collection:
+      indirect: double_slab_wood_old
+  stacked_books:
+    itemMaterial: BRICK
+    cmd: 435
+    display: Book Stack
+    type: BLOCK
+    blockData: minecraft:light_weighted_pressure_plate[power=8]
+    collection:
+      indirect: double_slab_wood_old
+  scrolls:
+    itemMaterial: BRICK
+    cmd: 434
+    display: Scrolls
+    type: BLOCK
+    blockData: minecraft:crimson_button[face=floor,facing=west,powered=false]
+    collection:
+      indirect: double_slab_wood_old
+  brown_shulker_box:
+    itemMaterial: CLAY_BALL
+    cmd: 166
+    display: OPENABLE Bookshelf
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:brown_shulker_box[facing=south]
+    blockDataWest: minecraft:brown_shulker_box[facing=west]
+    blockDataNorth: minecraft:brown_shulker_box[facing=north]
+    blockDataEast: minecraft:brown_shulker_box[facing=east]
+    collection:
+      indirect: double_slab_wood_old
+  cocoa_age0_s:
+    itemMaterial: BRICK
+    cmd: 505
+    display: Wall Bookshelf no Support
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cocoa[age=0,facing=south]
+    blockDataWest: minecraft:cocoa[age=0,facing=west]
+    blockDataNorth: minecraft:cocoa[age=0,facing=north]
+    blockDataEast: minecraft:cocoa[age=0,facing=east]
+    collection:
+      indirect: double_slab_wood_old
+  cocoa_age2_s:
+    itemMaterial: CLAY_BALL
+    cmd: 329
+    display: Empty Wall Bookshelf
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cocoa[age=1,facing=south]
+    blockDataWest: minecraft:cocoa[age=1,facing=west]
+    blockDataNorth: minecraft:cocoa[age=1,facing=north]
+    blockDataEast: minecraft:cocoa[age=1,facing=east]
+    collection:
+      indirect: double_slab_wood_old
+  cocoa_age1_s:
+    itemMaterial: CLAY_BALL
+    cmd: 328
+    display: Wall Bookshelf
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cocoa[age=2,facing=south]
+    blockDataWest: minecraft:cocoa[age=2,facing=west]
+    blockDataNorth: minecraft:cocoa[age=2,facing=north]
+    blockDataEast: minecraft:cocoa[age=2,facing=east]
+    collection:
+      indirect: double_slab_wood_old
+  light_bookshelf:
+    itemMaterial: CLAY_BALL
+    cmd: 397
+    display: Light Bookshelf
+    type: BLOCK
+    blockData: minecraft:dark_prismarine_slab[type=double,waterlogged=true]
+    collection:
+      indirect: double_slab_wood_old
+  
+  # table collection
+  flowering_azalea:
+    itemMaterial: BRICK
+    cmd: 477
+    display: Table with Drawer
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:flowering_azalea
+    collection:
+      A1: azalea
+      F1: flowering_azalea
+      G2: piston_base
+      I2: piston_head_normal
+      J1: low_table_2
+      E1: low_table_1
+      D2: furnace
+      C2: spinning_wheel
+      B2: lit_furnace
+      C0: jukebox
+      E0: cabinet
+      F4: bottle_1
+      G4: plate_1_regular
+      H4: lit_redstone_torch
+      I4: bed_orange
+      J4: double_slab_planks_oak
+      H2: piston_head_normal_short
+      A4: table_end
+      A0: table_corner
+      B4: shelving
+      C4: shelving_detail_sculk_vein
+      D4: mangrove_door_simple_shelving
+  mangrove_door_simple_shelving:
+    itemMaterial: BRICK
+    cmd: 511
+    display: Shelving Simple
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:mangrove_door[facing=south,half=upper,hinge=right,open=true,powered=false]
+    blockDataWest: minecraft:mangrove_door[facing=west,half=upper,hinge=right,open=true,powered=false]
+    blockDataNorth: minecraft:mangrove_door[facing=north,half=upper,hinge=right,open=true,powered=false]
+    blockDataEast: minecraft:mangrove_door[facing=east,half=upper,hinge=right,open=true,powered=false]
+    collection:
+      indirect: flowering_azalea
+  shelving_detail_sculk_vein:
+    itemMaterial: BRICK
+    cmd: 510
+    display: Shelving Deco
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:sculk_vein[down=false,east=false,north=false,south=true,up=false,waterlogged=false,west=false]
+    blockDataWest: minecraft:sculk_vein[down=false,east=false,north=false,south=false,up=false,waterlogged=false,west=true]
+    blockDataNorth: minecraft:sculk_vein[down=false,east=false,north=true,south=false,up=false,waterlogged=false,west=false]
+    blockDataEast: minecraft:sculk_vein[down=false,east=true,north=false,south=false,up=false,waterlogged=false,west=false]
+    collection:
+      indirect: flowering_azalea
+  shelving:
+    itemMaterial: BRICK
+    cmd: 509
+    display: Shelving
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:mangrove_door[facing=north,half=lower,hinge=left,open=false,powered=false]
+    blockDataWest: minecraft:mangrove_door[facing=east,half=lower,hinge=left,open=false,powered=false]
+    blockDataNorth: minecraft:mangrove_door[facing=south,half=lower,hinge=left,open=false,powered=false]
+    blockDataEast: minecraft:mangrove_door[facing=west,half=lower,hinge=left,open=false,powered=false]
+    collection:
+      indirect: flowering_azalea
+  table_corner:
+    itemMaterial: BRICK
+    cmd: 479
+    display: Corner Table
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:acacia_trapdoor[facing=east,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:acacia_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataNorth: minecraft:acacia_trapdoor[facing=north,half=top,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:acacia_trapdoor[facing=south,half=top,open=false,powered=true,waterlogged=false]
+    collection:
+      indirect: flowering_azalea
+  table_end:
+    itemMaterial: BRICK
+    cmd: 430
+    display: End Table
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:scaffolding[bottom=true,distance=6,waterlogged=false]
+    blockDataWest: minecraft:scaffolding[bottom=true,distance=3,waterlogged=false]
+    blockDataNorth: minecraft:scaffolding[bottom=true,distance=4,waterlogged=false]
+    blockDataEast: minecraft:scaffolding[bottom=true,distance=5,waterlogged=false]
+    collection:
+      indirect: flowering_azalea
+  cabinet:
+    itemMaterial: BRICK
+    cmd: 421
+    display: Cabinet
+    type: BLOCK
+    blockData: minecraft:brown_mushroom_block[down=false,east=false,north=false,south=false,up=false,west=false]
+    collection:
+      indirect: flowering_azalea
+  spinning_wheel:
+    itemMaterial: CLAY_BALL
+    cmd: 415
+    display: Spinning Wheel
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:twisting_vines[age=2]
+    blockDataWest: twisting_vines[age=3]
+    blockDataNorth: twisting_vines[age=0]
+    blockDataEast: twisting_vines[age=1]
+    collection:
+      indirect: flowering_azalea
+  azalea:
+    itemMaterial: BRICK
+    cmd: 478
+    display: Table
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:azalea
+    collection:
+      indirect: flowering_azalea
+  jukebox:
+    itemMaterial: JUKEBOX
+    cmd: 0
+    display: Drawers
+    category: Inter
+    type: VANILLA
+    collection:
+      indirect: flowering_azalea
+  low_table_2:
+    itemMaterial: CLAY_BALL
+    cmd: 449
+    display: Low table 2
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:stonecutter[facing=east]
+    collection:
+      indirect: flowering_azalea
+  piston_head_normal:
+    itemMaterial: CLAY_BALL
+    cmd: 167
+    display: Light Wood Table
+    category: Inter
+    type: SIX_FACES
+    blockDataSouth: minecraft:piston_head[facing=south,short=false,type=normal]
+    blockDataWest: minecraft:piston_head[facing=west,short=false,type=normal]
+    blockDataNorth: minecraft:piston_head[facing=north,short=false,type=normal]
+    blockDataEast: minecraft:piston_head[facing=east,short=false,type=normal]
+    blockDataDown: minecraft:piston_head[facing=down,short=false,type=normal]
+    blockDataUp: minecraft:piston_head[facing=up,short=false,type=normal]
+    collection:
+      indirect: flowering_azalea
+  piston_head_normal_short:
+    itemMaterial: CLAY_BALL
+    cmd: 443
+    display: Dark Wood Table
+    type: SIX_FACES
+    blockDataSouth: minecraft:piston_head[facing=south,short=true,type=normal]
+    blockDataWest: minecraft:piston_head[facing=west,short=true,type=normal]
+    blockDataNorth: minecraft:piston_head[facing=north,short=true,type=normal]
+    blockDataEast: minecraft:piston_head[facing=east,short=true,type=normal]
+    blockDataDown: minecraft:piston_head[facing=down,short=true,type=normal]
+    blockDataUp: minecraft:piston_head[facing=up,short=true,type=normal]
+    collection:
+      indirect: flowering_azalea
+  piston_base:
+    itemMaterial: PISTON
+    display: Table on stone base
+    category: Inter
+    type: SIX_FACES
+    blockDataSouth: minecraft:piston[extended=false,facing=south]
+    blockDataWest: minecraft:piston[extended=false,facing=west]
+    blockDataNorth: minecraft:piston[extended=false,facing=north]
+    blockDataEast: minecraft:piston[extended=false,facing=east]
+    blockDataDown: minecraft:piston[extended=false,facing=down]
+    blockDataUp: minecraft:piston[extended=false,facing=up]
+    collection:
+      indirect: flowering_azalea
+  furnace:
+    itemMaterial: FURNACE
+    cmd: 0
+    display: Furnace
+    category: Inter
+    type: VANILLA
+    collection:
+      indirect: flowering_azalea
+  # inside collection
+  low_table_1:
+    itemMaterial: CLAY_BALL
+    cmd: 450
+    display: Low table 1
+    type: BLOCK
+    blockData: minecraft:stonecutter[facing=north]
+    collection:
+      indirect: flowering_azalea
+  lit_furnace:
+    blockMaterial: LEGACY_BURNING_FURNACE
+    dataValueNorth: 3
+    dataValueWest: 5
+    dataValueSouth: 2
+    dataValueEast: 4
+    itemMaterial: CLAY_BALL
+    cmd: 168
+    display: Lit furnace
+    type: BURNING_FURNACE
+    collection:
+      indirect: flowering_azalea
+  
+  # cauldron collection
+  cauldron_empty:
+    itemMaterial: CLAY_BALL
+    cmd: 169
+    display: Empty cauldron
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:cauldron
+    collection:
+      A0: cauldron_level3
+      H2: cauldron_level2
+      E0: cauldron_level1
+      C2: cauldron_empty
+      I4: piston_head_normal
+  cauldron_level3:
+    itemMaterial: CLAY_BALL
+    cmd: 172
+    display: Cauldron 3/3 filled
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:water_cauldron[level=3]
+    collection:
+      indirect: cauldron_empty
+  # inside collection
+  cauldron_level1:
+    itemMaterial: CLAY_BALL
+    cmd: 170
+    display: Cauldron 1/3 filled
+    type: BLOCK
+    blockData: minecraft:water_cauldron[level=1]
+    collection:
+      indirect: cauldron_empty
+  cauldron_level2:
+    itemMaterial: CLAY_BALL
+    cmd: 171
+    display: Cauldron 2/3 filled
+    type: BLOCK
+    blockData: minecraft:water_cauldron[level=2]
+    collection:
+      indirect: cauldron_empty
+  
+  
+  # seating collection
+  cactus_stage6:
+    itemMaterial: CLAY_BALL
+    cmd: 176
+    display: High seat
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cactus[age=8]
+    blockDataWest: minecraft:cactus[age=9]
+    blockDataNorth: minecraft:cactus[age=6]
+    blockDataEast: minecraft:cactus[age=7]
+    collection:
+      F1: spinning_wheel
+      A1: comparator_powered_subtract_n
+      A0: cactus_stage6
+      F0: comparator_powered_subtract_e
+      G2: bed_orange
+      I2: bed_light_blue
+      J1: bed_green_half_regular
+      E0: bed_grey_half_regular
+      E1: bed_blue_half_regular
+      D2: bed_magenta
+      B2: bed_pink
+      H2: turtle_egg_chair
+      C2: big_dripleaf_e
+      F4: bottle_1
+      G4: plate_1_regular
+      H4: lit_redstone_torch
+      I4: piston_head_normal
+      J4: double_slab_planks_oak
+      A4: turtle_egg_bench
+  turtle_egg_bench:
+    itemMaterial: BRICK
+    cmd: 481
+    display: Bench
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:turtle_egg[eggs=3,hatch=0]
+    blockDataWest: minecraft:turtle_egg[eggs=3,hatch=1]
+    blockDataNorth: minecraft:turtle_egg[eggs=3,hatch=0]
+    blockDataEast: minecraft:turtle_egg[eggs=3,hatch=1]
+    collection:
+      indirect: cactus_stage6
+  turtle_egg_chair:
+    itemMaterial: BRICK
+    cmd: 429
+    display: Chair
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:turtle_egg[eggs=4,hatch=0]
+    blockDataWest: minecraft:turtle_egg[eggs=3,hatch=2]
+    blockDataNorth: minecraft:turtle_egg[eggs=4,hatch=2]
+    blockDataEast: minecraft:turtle_egg[eggs=4,hatch=1]
+    collection:
+      indirect: cactus_stage6
+  big_dripleaf_e:
+    itemMaterial: BRICK
+    cmd: 423
+    display: Small Stool
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:big_dripleaf_stem[facing=east,waterlogged=false]
+    collection:
+      indirect: cactus_stage6
+  comparator_powered_subtract_n:
+    itemMaterial: CLAY_BALL
+    cmd: 332
+    display: Red Stool
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:comparator[facing=north,mode=subtract,powered=true]
+    collection:
+      indirect: cactus_stage6
+  comparator_powered_subtract_e:
+    itemMaterial: CLAY_BALL
+    cmd: 333
+    display: Wooden Stool
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:comparator[facing=east,mode=subtract,powered=true]
+    collection:
+      indirect: cactus_stage6
+  bed_orange:
+    itemMaterial: ORANGE_BED
+    cmd: 1
+    display: Wooden Bench
+    category: Inter
+    type: VANILLA
+    collection:
+      indirect: cactus_stage6
+  bed_grey_half_regular:
+    contentItem: BRICK
+    itemMaterial: BRICK
+    cmd: 245
+    display: Poor Stool
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:campfire[facing=east,lit=false,signal_fire=true,waterlogged=false]
+    collection:
+      indirect: cactus_stage6
+  # inside collection
+  bed_magenta:
+    itemMaterial: MAGENTA_BED
+    cmd: 2
+    display: Blue bench
+    type: VANILLA
+    collection:
+      indirect: cactus_stage6
+  bed_light_blue:
+    itemMaterial: LIGHT_BLUE_BED
+    cmd: 3
+    display: Green bench
+    type: VANILLA
+    collection:
+      indirect: cactus_stage6
+  bed_pink:
+    itemMaterial: PINK_BED
+    cmd: 6
+    display: Red bench
+    type: VANILLA
+    collection:
+      indirect: cactus_stage6
+  bed_blue_half_regular:
+    contentItem: BRICK
+    itemMaterial: BRICK
+    cmd: 243
+    display: Blue stool
+    type: BLOCK
+    blockData: minecraft:campfire[facing=north,lit=false,signal_fire=true,waterlogged=false]
+    collection:
+      indirect: cactus_stage6
+  bed_green_half_regular:
+    contentItem: BRICK
+    itemMaterial: BRICK
+    cmd: 244
+    display: Green stool
+    type: BLOCK
+    blockData: minecraft:campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
+    collection:
+      indirect: cactus_stage6
+  
+  
+  
+  # bed collection
+  bed_silver:
+    itemMaterial: LIGHT_GRAY_BED
+    cmd: 8
+    display: Poor bed 1
+    category: Inter
+    type: VANILLA
+    collection:
+      A1: bed_black
+      A0: bed_red
+      F1: bed_brown
+      G2: bed_purple
+      H2: bed_gray
+      I2: bed_blue
+      J1: bed_cyan
+      E0: bed_white
+      E1: bed_silver
+      D2: bed_yellow
+      C2: bed_lime
+      B2: bed_green
+      I4: piston_head_normal
+      J4: bed_orange
+  bed_brown:
+    itemMaterial: BROWN_BED
+    cmd: 12
+    display: Cloth Bed 1
+    category: Inter
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  bed_gray:
+    itemMaterial: GRAY_BED
+    cmd: 7
+    display: Gray Bed
+    category: Inter
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  bed_white:
+    itemMaterial: WHITE_BED
+    cmd: 16
+    display: Bed
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  # inside collection
+  bed_cyan:
+    itemMaterial: CYAN_BED
+    cmd: 9
+    display: Poor Bed 2
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  bed_blue:
+    itemMaterial: BLUE_BED
+    cmd: 11
+    display: Blue bed
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  bed_lime:
+    itemMaterial: LIME_BED
+    cmd: 5
+    display: Lime Bed
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  bed_black:
+    itemMaterial: BLACK_BED
+    cmd: 15
+    display: Cloth Bed 2
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  bed_yellow:
+    itemMaterial: YELLOW_BED
+    cmd: 4
+    display: Yellow Bed
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  bed_purple:
+    itemMaterial: PURPLE_BED
+    cmd: 10
+    display: Purple Bed
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  bed_green:
+    itemMaterial: GREEN_BED
+    cmd: 13
+    display: Green Bed
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  bed_red:
+    itemMaterial: RED_BED
+    cmd: 14
+    display: Red Bed
+    type: VANILLA
+    collection:
+      indirect: bed_silver
+  
+  
+  # food/plates collection
+  cake:
+    itemMaterial: CAKE
+    cmd: 0
+    display: Bread
+    category: Inter
+    type: VANILLA
+    collection:
+      A1: plate_1_regular
+      F1: plate_2_regular
+      G2: wooden_pressure_plate
+      H2: cutlery_regular
+      I2: plate_stack
+      J1: brewing_stand
+      E0: cake
+      E1: cactus_stage1
+      D2: wooden_cutlery_ground
+      C2: bread
+      B2: wooden_cutlery
+      F4: bottle_1
+      G4: lit_redstone_torch
+      H4: piston_head_normal
+      I4: bed_orange
+      J4: double_slab_planks_oak
+      A0: cutlery_plate
+      A4: hanging_onions
+      B4: hanging_meat
+      C4: meat_plate
+      D4: turkey
+  turkey:
+    itemMaterial: CLAY_BALL
+    cmd: 956
+    display: Turkey Plate
+    type: BLOCK
+    blockData: minecraft:heavy_weighted_pressure_plate[power=10]
+    collection:
+      indirect: cake
+  meat_plate:
+    itemMaterial: CLAY_BALL
+    cmd: 934
+    display: Meat Plate
+    type: BLOCK
+    blockData: minecraft:heavy_weighted_pressure_plate[power=9]
+    collection:
+      indirect: cake
+  hanging_meat:
+    itemMaterial: CLAY_BALL
+    cmd: 920
+    display: Hanging Meat
+    type: BLOCK
+    blockData: minecraft:heavy_weighted_pressure_plate[power=7]
+    collection:
+      indirect: cake
+  hanging_onions:
+    itemMaterial: BRICK
+    cmd: 500
+    display: Hanging Onions
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:mangrove_propagule[age=1,hanging=false,stage=0,waterlogged=false]
+    collection:
+      indirect: cake
+  wooden_cutlery_ground:
+    itemMaterial: BRICK
+    cmd: 498
+    display: Wooden Cutlery
+    type: BLOCK
+    blockData: minecraft:lever[face=floor,facing=east,powered=false]
+    collection:
+      indirect: cake
+  wooden_cutlery:
+    contentItem: BRICK
+    itemMaterial: BRICK
+    cmd: 494
+    display: Hanging Wooden Cutlery
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:lever[face=wall,facing=north,powered=true]
+    blockDataWest: minecraft:lever[face=wall,facing=east,powered=true]
+    blockDataNorth: minecraft:lever[face=wall,facing=south,powered=true]
+    blockDataEast: minecraft:lever[face=wall,facing=west,powered=true]
+    collection:
+      indirect: cake
+  plate_stack:
+    itemMaterial: BRICK
+    cmd: 468
+    display: Stack of Plates
+    type: BLOCK
+    blockData: minecraft:heavy_weighted_pressure_plate[power=2]
+    collection:
+      indirect: cake
+  cutlery_plate:
+    contentItem: BRICK
+    itemMaterial: BRICK
+    cmd: 467
+    display: Plate with Cutlery
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:light_weighted_pressure_plate[power=11]
+    blockDataWest: minecraft:light_weighted_pressure_plate[power=12]
+    blockDataNorth: minecraft:light_weighted_pressure_plate[power=13]
+    blockDataEast: minecraft:light_weighted_pressure_plate[power=14]
+    collection:
+      indirect: cake
+  bread:
+    itemMaterial: BRICK
+    cmd: 466
+    display: Bread
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:heavy_weighted_pressure_plate[power=4]
+    collection:
+      indirect: cake
+  cactus_stage1:
+    itemMaterial: CLAY_BALL
+    cmd: 174
+    display: Meat
+    type: BLOCK
+    blockData: minecraft:cactus[age=1]
+    collection:
+      indirect: cake
+  brewing_stand:
+    itemMaterial: CLAY_BALL
+    cmd: 173
+    display: Suspension
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:brewing_stand[has_bottle_0=false,has_bottle_1=false,has_bottle_2=false]
+    collection:
+      indirect: cake
+  wooden_pressure_plate:
+    itemMaterial: OAK_PRESSURE_PLATE
+    cmd: 0
+    display: Wooden plate
+    type: VANILLA
+    collection:
+      indirect: cake
+  light_pressure_plate:
+    itemMaterial: LIGHT_WEIGHTED_PRESSURE_PLATE
+    cmd: 0
+    display: Plate
+    type: VANILLA
+    collection:
+      indirect: cake
+  cutlery_regular:
+    contentItem: BRICK
+    itemMaterial: BRICK
+    cmd: 390
+    display: Cutlery
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:light_weighted_pressure_plate[power=6]
+    blockDataWest: minecraft:light_weighted_pressure_plate[power=7]
+    blockDataNorth: minecraft:light_weighted_pressure_plate[power=4]
+    blockDataEast: minecraft:light_weighted_pressure_plate[power=5]
+    collection:
+      indirect: cake
+  plate_1_regular:
+    contentItem: BRICK
+    itemMaterial: BRICK
+    cmd: 391
+    display: Plate
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:light_weighted_pressure_plate[power=2]
+    collection:
+      indirect: cake
+  # inside collection
+  heavy_pressure_plate:
+    itemMaterial: HEAVY_WEIGHTED_PRESSURE_PLATE
+    cmd: 0
+    display: Plate
+    type: VANILLA
+    collection:
+      indirect: cake
+  stone_pressure_plate:
+    itemMaterial: STONE_PRESSURE_PLATE
+    cmd: 0
+    display: Stone plate
+    type: VANILLA
+    collection:
+      indirect: cake
+  plate_2_regular:
+    contentItem: BRICK
+    itemMaterial: BRICK
+    cmd: 392
+    display: Fancy plate
+    type: BLOCK
+    blockData: minecraft:light_weighted_pressure_plate[power=3]
+    collection:
+      indirect: cake
+  
+  # drinks collection
+  tripwire_hook:
+    itemMaterial: CLAY_BALL
+    cmd: 285
+    display: Hook
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:tripwire_hook[attached=false,facing=north,powered=false]
+    blockDataWest: minecraft:tripwire_hook[attached=false,facing=east,powered=false]
+    blockDataNorth: minecraft:tripwire_hook[attached=false,facing=south,powered=false]
+    blockDataEast: minecraft:tripwire_hook[attached=false,facing=west,powered=false]
+    collection:
+      A0: beer_mug
+      G2: bottle_2
+      I2: lever
+      E0: round_barrel
+      D2: tripwire_hook
+      B2: bottle_1
+      F4: plate_1_regular
+      G4: lit_redstone_torch
+      H4: piston_head_normal
+      I4: bed_orange
+      J4: double_slab_planks_oak
+      H2: pots
+      J1: pans
+      C0: beer_mug_cluster
+      A4: clay_cups
+      B4: metal_mug
+      C4: tripwire_bottle
+      E1: hanging_pans
+      C2: kettle
+      A1: chalice
+      D4: wooden_bowl
+      E4: flower_pot
+      F1: big_pots
+  big_pots:
+    itemMaterial: CLAY_BALL
+    cmd: 927
+    display: Big Pots
+    type: BLOCK
+    blockData: minecraft:heavy_weighted_pressure_plate[power=8]
+    collection:
+      indirect: tripwire_hook
+  wooden_bowl:
+    itemMaterial: BRICK
+    cmd: 495
+    display: Wooden Bowl
+    type: BLOCK
+    blockData: minecraft:turtle_egg[eggs=2,hatch=0]
+    collection:
+      indirect: tripwire_hook
+  chalice:
+    itemMaterial: BRICK
+    cmd: 484
+    display: Rich Chalice
+    type: BLOCK
+    blockData: minecraft:melon_stem[age=5]
+    collection:
+      indirect: tripwire_hook
+  kettle:
+    itemMaterial: BRICK
+    cmd: 483
+    display: Tea Kettle
+    type: BLOCK
+    blockData: minecraft:cherry_sapling[stage=1]
+    collection:
+      indirect: tripwire_hook
+  hanging_pans:
+    itemMaterial: BRICK
+    cmd: 482
+    display: Hanging Pans
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:warped_trapdoor[facing=north,half=top,open=true,powered=false,waterlogged=false]
+    blockDataWest: minecraft:warped_trapdoor[facing=east,half=top,open=true,powered=false,waterlogged=false]
+    blockDataNorth: minecraft:warped_trapdoor[facing=south,half=top,open=true,powered=false,waterlogged=false]
+    blockDataEast: minecraft:warped_trapdoor[facing=west,half=top,open=true,powered=false,waterlogged=false]
+    collection:
+      indirect: tripwire_hook
+  tripwire_bottle:
+    itemMaterial: BRICK
+    cmd: 472
+    display: Bottles
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:tripwire[attached=false,disarmed=true,east=false,north=false,powered=false,south=false,west=false]
+    collection:
+      indirect: tripwire_hook
+  metal_mug:
+    itemMaterial: BRICK
+    cmd: 471
+    display: Metal Mug
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:melon_stem[age=2]
+    collection:
+      indirect: tripwire_hook
+  clay_cups:
+    itemMaterial: BRICK
+    cmd: 470
+    display: Clay Cup
+    type: BLOCK
+    blockData: minecraft:heavy_weighted_pressure_plate[power=3]
+    collection:
+      indirect: tripwire_hook
+  beer_mug_cluster:
+    itemMaterial: BRICK
+    cmd: 469
+    display: Beer Mug Cluster
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:light_weighted_pressure_plate[power=15]
+    collection:
+      indirect: tripwire_hook
+  pans:
+    itemMaterial: BRICK
+    cmd: 433
+    display: Pans
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:light_weighted_pressure_plate[power=10]
+    collection:
+      indirect: tripwire_hook
+  pots:
+    itemMaterial: BRICK
+    cmd: 432
+    display: Pots
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:light_weighted_pressure_plate[power=9]
+    collection:
+      indirect: tripwire_hook
+  round_barrel:
+    itemMaterial: CLAY_BALL
+    cmd: 109
+    display: Round Barrel
+    category: Inter
+    type: THREE_AXIS
+    blockDataZ: minecraft:acacia_leaves[distance=3,persistent=false]
+    blockDataX: minecraft:acacia_leaves[distance=2,persistent=false]
+    blockDataY: minecraft:acacia_leaves[distance=4,persistent=false]
+    collection:
+      indirect: tripwire_hook
+  beer_mug:
+    itemMaterial: CLAY_BALL
+    cmd: 124
+    display: Beer Mug
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:melon_stem[age=3]
+    collection:
+      indirect: tripwire_hook
+  bottle_1:
+    itemMaterial: CLAY_BALL
+    cmd: 122
+    display: Bottle of mineral water
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:melon_stem[age=6]
+    collection:
+      indirect: tripwire_hook
+  bottle_2:
+    contentItem: BRICK
+    contentCmd: 398
+    contentHeight: 0.3125
+    itemMaterial: CLAY_BALL
+    cmd: 123
+    display: Vessel
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:melon_stem[age=7]
+    collection:
+      indirect: tripwire_hook
+  # inside collection
+  lever:
+    itemMaterial: LEVER
+    cmd: 0
+    display: Lever / Barrel tap
+    type: VANILLA
+    collection:
+      indirect: tripwire_hook
+  
+  
+  # misc blocks
+  iron_fence:
+    itemMaterial: IRON_BARS
+    cmd: 0
+    display: Iron fence
+    category: Inter
+    type: VANILLA
+  ladder:
+    itemMaterial: CLAY_BALL
+    cmd: 175
+    display: Ladder
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:ladder[facing=north,waterlogged=false]
+    blockDataWest: minecraft:ladder[facing=east,waterlogged=false]
+    blockDataNorth: minecraft:ladder[facing=south,waterlogged=false]
+    blockDataEast: minecraft:ladder[facing=west,waterlogged=false]
+  leaning_ladder:
+    itemMaterial: BRICK
+    cmd: 431
+    display: Leaning Ladder
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:twisting_vines[age=20]
+    blockDataWest: minecraft:twisting_vines[age=21]
+    blockDataNorth: minecraft:twisting_vines[age=18]
+    blockDataEast: minecraft:twisting_vines[age=19]
+  repeater_delay2_s:
+    itemMaterial: CLAY_BALL
+    cmd: 186
+    display: Cloth mat
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:repeater[delay=2,facing=south,locked=false,powered=false]
+  repeater_delay2_w:
+    itemMaterial: CLAY_BALL
+    cmd: 187
+    display: Leather mat
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:repeater[delay=2,facing=west,locked=false,powered=false]
+  
+  # lighting collection
+  torch:
+    itemMaterial: TORCH
+    cmd: 0
+    display: Torch
+    category: Inter
+    type: VANILLA
+    collection:
+      C0: torch
+      C2: lit_redstone_torch
+      A0: unlit_redstone_torch
+      H2: repeater_delay1_s
+      F4: bottle_1
+      G4: plate_1_regular
+      H4: piston_head_normal
+      I4: bed_orange
+      J4: double_slab_planks_oak
+      B2: soul_lantern
+      D2: lantern
+      G2: chandelier
+      I2: big_chandelier
+      E0: brazier
+      A1: candle_holder
+  candle_holder:
+    itemMaterial: BRICK
+    cmd: 501
+    display: Candle Holder
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:mangrove_propagule[age=0,hanging=false,stage=0,waterlogged=false]
+    collection:
+      indirect: torch
+  brazier:
+    itemMaterial: BRICK
+    cmd: 465
+    display: Brazier
+    type: BLOCK
+    blockData: minecraft:cave_vines[age=3,berries=true]
+    collection:
+      indirect: torch
+  big_chandelier:
+    itemMaterial: BRICK
+    cmd: 464
+    display: Large Chandelier
+    type: BLOCK
+    blockData: minecraft:cave_vines[age=2,berries=true]
+    collection:
+      indirect: torch
+  chandelier:
+    itemMaterial: BRICK
+    cmd: 463
+    display: Chandelier
+    type: BLOCK
+    blockData: minecraft:cave_vines[age=1,berries=true]
+    collection:
+      indirect: torch
+  soul_lantern:
+    itemMaterial: BRICK
+    cmd: 461
+    display: Dimmed Lantern
+    type: BISECTED
+    blockDataDown: minecraft:soul_lantern[hanging=false,waterlogged=false]
+    blockDataUp: minecraft:soul_lantern[hanging=true,waterlogged=false]
+    collection:
+      indirect: torch
+  lantern:
+    itemMaterial: BRICK
+    cmd: 462
+    display: Lantern
+    category: Inter
+    type: BISECTED
+    blockDataDown: minecraft:lantern[hanging=false,waterlogged=false]
+    blockDataUp: minecraft:lantern[hanging=true,waterlogged=false]
+    collection:
+      indirect: torch
+  lit_redstone_torch:
+    blockMaterial: REDSTONE_TORCH
+    itemMaterial: CLAY_BALL
+    cmd: 246
+    display: Candle (lit)
+    category: Inter
+    type: FIVE_FACES
+    blockDataSouth: minecraft:redstone_wall_torch[facing=south,lit=true]
+    blockDataWest: minecraft:redstone_wall_torch[facing=west,lit=true]
+    blockDataNorth: minecraft:redstone_wall_torch[facing=north,lit=true]
+    blockDataEast: minecraft:redstone_wall_torch[facing=east,lit=true]
+    blockDataUp: minecraft:redstone_torch[lit=true]
+    collection:
+      indirect: torch
+  repeater_delay1_s:
+    itemMaterial: CLAY_BALL
+    cmd: 182
+    display: Candle Tray
+    type: BLOCK
+    blockData: minecraft:repeater[delay=1,facing=south,locked=false,powered=false]
+    collection:
+      indirect: torch
+  # inside collection
+  unlit_redstone_torch:
+    blockMaterial: REDSTONE_TORCH
+    itemMaterial: CLAY_BALL
+    cmd: 284
+    display: Candle (unlit)
+    type: FIVE_FACES
+    blockDataSouth: minecraft:redstone_wall_torch[facing=south,lit=false]
+    blockDataWest: minecraft:redstone_wall_torch[facing=west,lit=false]
+    blockDataNorth: minecraft:redstone_wall_torch[facing=north,lit=false]
+    blockDataEast: minecraft:redstone_wall_torch[facing=east,lit=false]
+    blockDataUp: minecraft:redstone_torch[lit=false]
+    collection:
+      indirect: torch
+  carpet_1x3:
+    itemMaterial: BRICK
+    cmd: 518
+    display: 1x3 Carpet
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:mangrove_pressure_plate[powered=true]
+    blockDataWest: minecraft:mangrove_pressure_plate[powered=false]
+    blockDataNorth: minecraft:mangrove_pressure_plate[powered=true]
+    blockDataEast: minecraft:mangrove_pressure_plate[powered=false]
+    collection:
+      A0: carpet_1x3
+      C2: carpet_2x3
+      E0: carpet_3x3_b
+      E1: carpet_3x3_g
+      J1: carpet_3x3_r
+      H2: long_carpet_end
+      G2: long_carpet_middle
+  long_carpet_middle:
+    itemMaterial: BRICK
+    cmd: 524
+    display: Long Carpet Middle
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:dark_oak_pressure_plate[powered=true]
+    blockDataWest: minecraft:dark_oak_pressure_plate[powered=false]
+    blockDataNorth: minecraft:dark_oak_pressure_plate[powered=true]
+    blockDataEast: minecraft:dark_oak_pressure_plate[powered=false]
+    collection:
+      indirect: carpet_1x3
+  long_carpet_end:
+    itemMaterial: BRICK
+    cmd: 523
+    display: Long Carpet End
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:jungle_pressure_plate[powered=false]
+    blockDataWest: minecraft:acacia_pressure_plate[powered=false]
+    blockDataNorth: minecraft:jungle_pressure_plate[powered=true]
+    blockDataEast: minecraft:acacia_pressure_plate[powered=true]
+    collection:
+      indirect: carpet_1x3
+  carpet_3x3_r:
+    itemMaterial: BRICK
+    cmd: 522
+    display: Red Carpet
+    type: BLOCK
+    blockData: minecraft:warped_pressure_plate[powered=false]
+    collection:
+      indirect: carpet_1x3
+  carpet_3x3_g:
+    itemMaterial: BRICK
+    cmd: 521
+    display: Green Carpet
+    type: BLOCK
+    blockData: minecraft:warped_pressure_plate[powered=true]
+    collection:
+      indirect: carpet_1x3
+  carpet_3x3_b:
+    itemMaterial: BRICK
+    cmd: 520
+    display: Blue Carpet
+    type: BLOCK
+    blockData: minecraft:crimson_pressure_plate[powered=true]
+    collection:
+      indirect: carpet_1x3
+  carpet_2x3:
+    itemMaterial: BRICK
+    cmd: 519
+    display: 2x3 Carpet
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:polished_blackstone_pressure_plate[powered=true]
+    blockDataWest: minecraft:polished_blackstone_pressure_plate[powered=false]
+    blockDataNorth: minecraft:polished_blackstone_pressure_plate[powered=true]
+    blockDataEast: minecraft:polished_blackstone_pressure_plate[powered=false]
+    collection:
+      indirect: carpet_1x3
+  banner_gondor:
+    itemMaterial: CLAY_BALL
+    cmd: 462
+    display: Banner Gondor
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:warped_button[face=wall,facing=north,powered=false]
+    blockDataWest: minecraft:warped_button[face=wall,facing=east,powered=false]
+    blockDataNorth: minecraft:warped_button[face=wall,facing=south,powered=false]
+    blockDataEast: minecraft:warped_button[face=wall,facing=west,powered=false]
+    collection:
+      A0: banner_gondor
+      C2: banner_elf
+      E0: banner_Inn
+      H2: banner_Sea
+      B2: portrait
+  portrait:
+    itemMaterial: BRICK
+    cmd: 517
+    display: Portrait
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:acacia_button[face=wall,facing=north,powered=false]
+    blockDataWest: minecraft:acacia_button[face=wall,facing=east,powered=false]
+    blockDataNorth: minecraft:acacia_button[face=wall,facing=south,powered=false]
+    blockDataEast: minecraft:acacia_button[face=wall,facing=west,powered=false]
+    collection:
+      indirect: banner_gondor
+  banner_Inn:
+    itemMaterial: CLAY_BALL
+    cmd: 463
+    display: Banner Inn
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:warped_button[face=wall,facing=north,powered=true]
+    blockDataWest: minecraft:warped_button[face=wall,facing=east,powered=true]
+    blockDataNorth: minecraft:warped_button[face=wall,facing=south,powered=true]
+    blockDataEast: minecraft:warped_button[face=wall,facing=west,powered=true]
+    collection:
+      indirect: banner_gondor
+  banner_elf:
+    itemMaterial: CLAY_BALL
+    cmd: 464
+    display: Banner Elf
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:polished_blackstone_button[face=wall,facing=north,powered=false]
+    blockDataWest: minecraft:polished_blackstone_button[face=wall,facing=east,powered=false]
+    blockDataNorth: minecraft:polished_blackstone_button[face=wall,facing=south,powered=false]
+    blockDataEast: minecraft:polished_blackstone_button[face=wall,facing=west,powered=false]
+    collection:
+      indirect: banner_gondor
+  banner_Sea:
+    itemMaterial: CLAY_BALL
+    cmd: 465
+    display: Banner Sea
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:polished_blackstone_button[face=wall,facing=north,powered=true]
+    blockDataWest: minecraft:polished_blackstone_button[face=wall,facing=east,powered=true]
+    blockDataNorth: minecraft:polished_blackstone_button[face=wall,facing=south,powered=true]
+    blockDataEast: minecraft:polished_blackstone_button[face=wall,facing=west,powered=true]
+    collection:
+      indirect: banner_gondor
+  tools:
+    itemMaterial: CLAY_BALL
+    cmd: 466
+    display: Tools
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:crimson_button[face=wall,facing=north,powered=true]
+    blockDataWest: minecraft:crimson_button[face=wall,facing=east,powered=true]
+    blockDataNorth: minecraft:crimson_button[face=wall,facing=south,powered=true]
+    blockDataEast: minecraft:crimson_button[face=wall,facing=west,powered=true]
+    collection:
+      A0: tools
+      A1: sword
+      F1: black_candle_hammer
+      G2: black_candle_axe
+      C0: black_candle_bow
+      B2: black_candle_saw
+      C2: rack_empty
+      H2: leaning_tools
+      I2: shovel
+      J1: hanging_spears
+      E1: hanging_shield
+      D2: sword_rack
+      A4: broom
+      B4: tongs
+      C4: pickaxe
+      D4: arrows
+  arrows:
+    itemMaterial: CLAY_BALL
+    cmd: 916
+    display: Arrows
+    type: BLOCK
+    blockData: minecraft:sweet_berry_bush[age=0]
+    collection:
+      indirect: tools
+  pickaxe:
+    itemMaterial: CLAY_BALL
+    cmd: 915
+    display: Pickaxe
+    type: BLOCK
+    blockData: minecraft:light_blue_candle[candles=1,lit=false,waterlogged=false]
+    collection:
+      indirect: tools
+  tongs:
+    itemMaterial: CLAY_BALL
+    cmd: 914
+    display: Tongs
+    type: BLOCK
+    blockData: minecraft:light_blue_candle[candles=2,lit=false,waterlogged=false]
+    collection:
+      indirect: tools
+  broom:
+    itemMaterial: BRICK
+    cmd: 504
+    display: Leaning Broom
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:pumpkin_stem[age=5]
+    blockDataWest: minecraft:pumpkin_stem[age=4]
+    blockDataNorth: minecraft:pumpkin_stem[age=7]
+    blockDataEast: minecraft:pumpkin_stem[age=6]
+    collection:
+      indirect: tools
+  sword_rack:
+    itemMaterial: BRICK
+    cmd: 499
+    display: Hanging / Rack Swords
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:warped_trapdoor[facing=north,half=top,open=true,powered=true,waterlogged=false]
+    blockDataWest: minecraft:warped_trapdoor[facing=east,half=top,open=true,powered=true,waterlogged=false]
+    blockDataNorth: minecraft:warped_trapdoor[facing=south,half=top,open=true,powered=true,waterlogged=false]
+    blockDataEast: minecraft:warped_trapdoor[facing=west,half=top,open=true,powered=true,waterlogged=false]
+    collection:
+      indirect: tools
+  hanging_shield:
+    itemMaterial: BRICK
+    cmd: 491
+    display: Hanging Shield
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:dead_brain_coral_wall_fan[facing=north,waterlogged=false]
+    blockDataWest: minecraft:dead_brain_coral_wall_fan[facing=east,waterlogged=false]
+    blockDataNorth: minecraft:dead_brain_coral_wall_fan[facing=south,waterlogged=false]
+    blockDataEast: minecraft:dead_brain_coral_wall_fan[facing=west,waterlogged=false]
+    collection:
+      indirect: tools
+  hanging_spears:
+    itemMaterial: BRICK
+    cmd: 490
+    display: Hanging Spears
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:warped_trapdoor[facing=north,half=bottom,open=true,powered=true,waterlogged=false]
+    blockDataWest: minecraft:warped_trapdoor[facing=east,half=bottom,open=true,powered=true,waterlogged=false]
+    blockDataNorth: minecraft:warped_trapdoor[facing=south,half=bottom,open=true,powered=true,waterlogged=false]
+    blockDataEast: minecraft:warped_trapdoor[facing=west,half=bottom,open=true,powered=true,waterlogged=false]
+    collection:
+      indirect: tools
+  shovel:
+    itemMaterial: BRICK
+    cmd: 475
+    display: Shovel
+    type: BLOCK
+    blockData: minecraft:crimson_button[face=floor,facing=south,powered=false]
+    collection:
+      indirect: tools
+  leaning_tools:
+    itemMaterial: BRICK
+    cmd: 474
+    display: Leaning Farm Tools
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:crimson_button[face=floor,facing=south,powered=true]
+    blockDataWest: minecraft:crimson_button[face=floor,facing=west,powered=true]
+    blockDataNorth: minecraft:crimson_button[face=floor,facing=north,powered=true]
+    blockDataEast: minecraft:crimson_button[face=floor,facing=east,powered=true]
+    collection:
+      indirect: tools
+  rack_empty:
+    itemMaterial: BRICK
+    cmd: 473
+    display: Empty Rack
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:warped_trapdoor[facing=north,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataWest: minecraft:warped_trapdoor[facing=east,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataNorth: minecraft:warped_trapdoor[facing=south,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataEast: minecraft:warped_trapdoor[facing=west,half=bottom,open=true,powered=false,waterlogged=false]
+    collection:
+      indirect: tools
+  sword:
+    itemMaterial: CLAY_BALL
+    cmd: 467
+    display: Sword on wall
+    category: Inter
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:crimson_button[face=wall,facing=north,powered=false]
+    blockDataWest: minecraft:crimson_button[face=wall,facing=east,powered=false]
+    blockDataNorth: minecraft:crimson_button[face=wall,facing=south,powered=false]
+    blockDataEast: minecraft:crimson_button[face=wall,facing=west,powered=false]
+    collection:
+      indirect: tools
+  black_candle_hammer:
+    itemMaterial: BRICK
+    cmd: 436
+    display: Hammer
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:black_candle[candles=1,lit=false,waterlogged=false]
+    collection:
+      indirect: tools
+  black_candle_axe:
+    itemMaterial: BRICK
+    cmd: 439
+    display: Axe
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:black_candle[candles=2,lit=false,waterlogged=false]
+    collection:
+      indirect: tools
+  black_candle_bow:
+    itemMaterial: BRICK
+    cmd: 438
+    display: Bow
+    category: Inter
+    type: BLOCK
+    blockData: minecraft:black_candle[candles=3,lit=false,waterlogged=false]
+    collection:
+      indirect: tools
+  black_candle_saw:
+    itemMaterial: BRICK
+    cmd: 437
+    display: Saw
+    type: BLOCK
+    blockData: minecraft:black_candle[candles=4,lit=false,waterlogged=false]
+    collection:
+      indirect: tools
+  grate:
+    display: Iron Grate
+    type: BISECTED
+    itemMaterial: CLAY_BALL
+    cmd: 857
+    category: Inter
+    blockData: minecraft:mangrove_trapdoor[facing=north,half=top,open=false,powered=true,waterlogged=false]
+    blockDataDown: minecraft:mangrove_trapdoor[facing=east,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:bamboo_door[facing=north,half=upper,hinge=left,open=true,powered=true]
+    blockDataSouth: minecraft:bamboo_door[facing=west,half=upper,hinge=left,open=true,powered=true]
+    blockDataNorth: minecraft:bamboo_door[facing=east,half=upper,hinge=left,open=true,powered=true]
+    blockDataUp: minecraft:mangrove_trapdoor[facing=north,half=top,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:bamboo_door[facing=south,half=upper,hinge=left,open=true,powered=true]
+  flower_pot:
+    display: Flower Pot
+    type: VANILLA
+    itemMaterial: FLOWER_POT
+  lectern:
+    display: Lectern
+    type: FOUR_DIRECTIONS
+    itemMaterial: LECTERN
+    blockDataWest: minecraft:lectern[facing=east,has_book=false,powered=false]
+    blockDataSouth: minecraft:lectern[facing=north,has_book=false,powered=false]
+    blockDataNorth: minecraft:lectern[facing=south,has_book=false,powered=false]
+    blockDataEast: minecraft:lectern[facing=west,has_book=false,powered=false]
+  fancy_lectern:
+    display: Fancy Lectern
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 1017
+    blockDataWest: minecraft:lectern[facing=east,has_book=false,powered=true]
+    blockDataSouth: minecraft:lectern[facing=north,has_book=false,powered=true]
+    blockDataNorth: minecraft:lectern[facing=south,has_book=false,powered=true]
+    blockDataEast: minecraft:lectern[facing=west,has_book=false,powered=true]
+  paper_and_quill:
+    display: Paper and Quill
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 1018
+    blockDataWest: minecraft:tripwire[attached=true,disarmed=true,east=true,north=true,powered=true,south=true,west=true]
+    blockDataSouth: minecraft:tripwire[attached=true,disarmed=true,east=true,north=true,powered=false,south=true,west=true]
+    blockDataNorth: minecraft:tripwire[attached=true,disarmed=false,east=true,north=true,powered=false,south=true,west=true]
+    blockDataEast: minecraft:tripwire[attached=true,disarmed=false,east=true,north=true,powered=true,south=true,west=true]
+
+
+
+
+
+
+
+
+
+
+
+
+

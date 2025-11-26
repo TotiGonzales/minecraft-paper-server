@@ -1,0 +1,936 @@
+Items:
+  piston_normal_extended_up:
+    itemMaterial: CLAY_BALL
+    cmd: 112
+    display: Light grey bricks Chimney
+    category: Roof
+    type: BLOCK
+    blockData: minecraft:piston[extended=true,facing=up]
+    collection:
+      A0: piston_normal_extended_up
+      F1: piston_sticky_extended_up
+      D2: purpur_block
+      E1: jungle_planks
+      E0: acacia_planks
+      J1: dark_oak_planks
+      I2: spruce_planks
+      C2: crimson_planks
+  piston_sticky_extended_up:
+    itemMaterial: CLAY_BALL
+    cmd: 111
+    display: Sandstone Chimney
+    category: Roof
+    type: BLOCK
+    blockData: minecraft:sticky_piston[extended=true,facing=up]
+    collection:
+      indirect: piston_normal_extended_up
+  crimson_planks:
+    itemMaterial: CRIMSON_PLANKS
+    cmd: 1
+    display: Wooden Shingles
+    category: Roof
+    type: VANILLA
+    collection:
+      A1: acacia_fence_gate_powered_open
+      A0: crimson_planks
+      F1: crimson_stairs
+      G2: crimson_slab
+      F4: spruce_planks
+      G4: dark_oak_planks
+      H4: jungle_planks
+      H2: trapdoor_wood_shingles
+      I4: purpur_block
+      A4: piston_sticky_extended_up
+      B4: piston_normal_extended_up
+      J4: acacia_planks
+      B2: wooden_shingles_quarter_slab_upper
+      C2: wooden_shingles_quarter_slab
+  crimson_stairs:
+    itemMaterial: CRIMSON_STAIRS
+    cmd: 0
+    display: Wooden shingles Stairs
+    type: VANILLA
+    collection:
+      indirect: crimson_planks
+  crimson_slab:
+    itemMaterial: CRIMSON_SLAB
+    cmd: 1
+    display: Wooden shingles slab [126:1]
+    type: VANILLA
+    collection:
+      indirect: crimson_planks
+  acacia_fence_gate_powered_open:
+    itemMaterial: CLAY_BALL
+    cmd: 434
+    display: Wooden shingles vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:crimson_fence_gate[facing=south,in_wall=true,open=true,powered=false]
+    blockDataWest: minecraft:crimson_fence_gate[facing=west,in_wall=true,open=true,powered=false]
+    blockDataNorth: minecraft:crimson_fence_gate[facing=north,in_wall=true,open=true,powered=false]
+    blockDataEast: minecraft:crimson_fence_gate[facing=east,in_wall=true,open=true,powered=false]
+    collection:
+      indirect: crimson_planks
+  trapdoor_wood_shingles:
+    itemMaterial: CLAY_BALL
+    cmd: 974
+    display: Wood shingles Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:bamboo_trapdoor[facing=west,half=top,open=false,powered=false,waterlogged=false]
+    blockDataDown: minecraft:bamboo_trapdoor[facing=west,half=bottom,open=false,powered=false,waterlogged=false]
+    collection:
+      indirect: crimson_planks
+  spruce_planks:
+    itemMaterial: SPRUCE_PLANKS
+    cmd: 1
+    display: Grey shingles
+    category: Roof
+    type: VANILLA
+    collection:
+      A1: jungle_fence_gate_closed
+      A0: spruce_planks
+      F1: spruce_stairs
+      G2: half_slab_spruce
+      F4: dark_oak_planks
+      G4: acacia_planks
+      H4: jungle_planks
+      H2: trapdoor_grey_shingles
+      I4: purpur_block
+      A4: piston_sticky_extended_up
+      B4: piston_normal_extended_up
+      J4: crimson_planks
+      B2: gray_shingles_quarter_slab_upper
+      C2: gray_shingles_quarter_slab
+  jungle_fence_gate_closed:
+    itemMaterial: CLAY_BALL
+    cmd: 230
+    display: Grey shingles vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:jungle_fence_gate[facing=south,in_wall=false,open=false,powered=false]
+    blockDataWest: minecraft:jungle_fence_gate[facing=west,in_wall=false,open=false,powered=false]
+    blockDataNorth: minecraft:jungle_fence_gate[facing=north,in_wall=false,open=false,powered=false]
+    blockDataEast: minecraft:jungle_fence_gate[facing=east,in_wall=false,open=false,powered=false]
+    collection:
+      indirect: spruce_planks
+  spruce_stairs:
+    itemMaterial: SPRUCE_STAIRS
+    cmd: 0
+    display: Grey shingles Stairs
+    type: VANILLA
+    collection:
+      indirect: spruce_planks
+  half_slab_spruce:
+    itemMaterial: SPRUCE_SLAB
+    cmd: 1
+    display: Grey shingles slab [126:1]
+    type: VANILLA
+    collection:
+      indirect: spruce_planks
+  trapdoor_grey_shingles:
+    itemMaterial: CLAY_BALL
+    cmd: 979
+    display: Grey shingles Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:bamboo_trapdoor[facing=south,half=top,open=false,powered=true,waterlogged=false]
+    blockDataDown: minecraft:bamboo_trapdoor[facing=south,half=bottom,open=false,powered=true,waterlogged=false]
+    collection:
+      indirect: spruce_planks
+  dark_oak_planks:
+    itemMaterial: DARK_OAK_PLANKS
+    cmd: 5
+    display: Blue shingles
+    category: Roof
+    type: VANILLA
+    collection:
+      A1: spruce_fence_gate_closed
+      A0: dark_oak_planks
+      F1: dark_oak_stairs
+      G2: half_slab_dark_oak
+      F4: spruce_planks
+      G4: acacia_planks
+      H4: jungle_planks
+      H2: trapdoor_blue_shingles
+      I4: purpur_block
+      A4: piston_sticky_extended_up
+      B4: piston_normal_extended_up
+      J4: crimson_planks
+      B2: blue_shingles_quarter_slab_upper
+      C2: blue_shingles_quarter_slab
+  spruce_fence_gate_closed:
+    itemMaterial: CLAY_BALL
+    cmd: 233
+    display: Blue shingles vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:spruce_fence_gate[facing=south,in_wall=false,open=false,powered=false]
+    blockDataWest: minecraft:spruce_fence_gate[facing=west,in_wall=false,open=false,powered=false]
+    blockDataNorth: minecraft:spruce_fence_gate[facing=north,in_wall=false,open=false,powered=false]
+    blockDataEast: minecraft:spruce_fence_gate[facing=east,in_wall=false,open=false,powered=false]
+    collection:
+      indirect: dark_oak_planks
+  dark_oak_stairs:
+    itemMaterial: DARK_OAK_STAIRS
+    cmd: 0
+    display: Blue shingles Stair
+    type: VANILLA
+    collection:
+      indirect: dark_oak_planks
+  half_slab_dark_oak:
+    itemMaterial: DARK_OAK_SLAB
+    cmd: 5
+    display: Blue shingles Slab
+    type: VANILLA
+    collection:
+      indirect: dark_oak_planks
+  trapdoor_blue_shingles:
+    itemMaterial: CLAY_BALL
+    cmd: 973
+    display: Blue shingles Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:bamboo_trapdoor[facing=south,half=top,open=false,powered=false,waterlogged=false]
+    blockDataDown: minecraft:bamboo_trapdoor[facing=south,half=bottom,open=false,powered=false,waterlogged=false]
+    collection:
+      indirect: dark_oak_planks
+  acacia_planks:
+    itemMaterial: ACACIA_PLANKS
+    cmd: 4
+    display: Green Shingles
+    category: Roof
+    type: VANILLA
+    collection:
+      A1: spruce_fence_gate_powered_closed
+      A0: acacia_planks
+      F1: acacia_stairs
+      G2: half_slab_acacia
+      F4: spruce_planks
+      G4: dark_oak_planks
+      H2: trapdoor_green_shingles
+      H4: jungle_planks
+      I4: purpur_block
+      A4: piston_sticky_extended_up
+      B4: piston_normal_extended_up
+      J4: crimson_planks
+      B2: green_shingles_quarter_slab_upper
+      C2: green_shingles_quarter_slab
+  spruce_fence_gate_powered_closed:
+    itemMaterial: CLAY_BALL
+    cmd: 234
+    display: Green shingles vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:spruce_fence_gate[facing=south,in_wall=false,open=false,powered=true]
+    blockDataWest: minecraft:spruce_fence_gate[facing=west,in_wall=false,open=false,powered=true]
+    blockDataNorth: minecraft:spruce_fence_gate[facing=north,in_wall=false,open=false,powered=true]
+    blockDataEast: minecraft:spruce_fence_gate[facing=east,in_wall=false,open=false,powered=true]
+    collection:
+      indirect: acacia_planks
+  acacia_stairs:
+    itemMaterial: ACACIA_STAIRS
+    cmd: 0
+    display: Green shingles Stair
+    type: VANILLA
+    collection:
+      indirect: acacia_planks
+  half_slab_acacia:
+    itemMaterial: ACACIA_SLAB
+    cmd: 4
+    display: Green shingles Slab
+    type: VANILLA
+    collection:
+      indirect: acacia_planks
+  trapdoor_green_shingles:
+    itemMaterial: CLAY_BALL
+    cmd: 972
+    display: Green shingles Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:bamboo_trapdoor[facing=east,half=top,open=false,powered=false,waterlogged=false]
+    blockDataDown: minecraft:bamboo_trapdoor[facing=east,half=bottom,open=false,powered=false,waterlogged=false]
+    collection:
+      indirect: ACACIA_SLAB
+  jungle_planks:
+    itemMaterial: JUNGLE_PLANKS
+    cmd: 3
+    display: Orange shingles [5:3]
+    category: Roof
+    type: VANILLA
+    collection:
+      A1: jungle_fence_gate_powered_closed
+      A0: jungle_planks
+      F1: jungle_stairs
+      G2: half_slab_jungle
+      F4: spruce_planks
+      G4: dark_oak_planks
+      H2: trapdoor_orange_shingles
+      H4: acacia_planks
+      I4: purpur_block
+      A4: piston_sticky_extended_up
+      B4: piston_normal_extended_up
+      J4: crimson_planks
+      B2: orange_shingles_quarter_slab_upper
+      C2: orange_shingles_quarter_slab
+  jungle_fence_gate_powered_closed:
+    itemMaterial: CLAY_BALL
+    cmd: 232
+    display: Orange shingles vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:jungle_fence_gate[facing=south,in_wall=false,open=false,powered=true]
+    blockDataWest: minecraft:jungle_fence_gate[facing=west,in_wall=false,open=false,powered=true]
+    blockDataNorth: minecraft:jungle_fence_gate[facing=north,in_wall=false,open=false,powered=true]
+    blockDataEast: minecraft:jungle_fence_gate[facing=east,in_wall=false,open=false,powered=true]
+    collection:
+      indirect: jungle_planks
+  jungle_stairs:
+    itemMaterial: JUNGLE_STAIRS
+    cmd: 0
+    display: Orange shingles Stair
+    type: VANILLA
+    collection:
+      indirect: jungle_planks
+  half_slab_jungle:
+    itemMaterial: JUNGLE_SLAB
+    cmd: 3
+    display: Orange shingles Slab
+    type: VANILLA
+    collection:
+      indirect: jungle_planks
+  trapdoor_orange_shingles:
+    itemMaterial: CLAY_BALL
+    cmd: 971
+    display: Orange shingles Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:bamboo_trapdoor[facing=north,half=top,open=false,powered=false,waterlogged=false]
+    blockDataDown: minecraft:bamboo_trapdoor[facing=north,half=bottom,open=false,powered=false,waterlogged=false]
+    collection:
+      indirect: jungle_planks
+  purpur_block:
+    itemMaterial: PURPUR_BLOCK
+    cmd: 0
+    display: Thatch
+    category: Roof
+    type: VANILLA
+    collection:
+      F1: purpur_block
+      A0: trapdoor_thatch_shingles
+      G2: purpur_stairs
+      I2: half_slab_purpur
+      J1: jungle_fence_gate_open
+      A1: prismarine_bricks
+      B2: smooth_red_sandstone_stairs
+      D2: prismarine_brick_slab
+      E1: crimson_fence_gate_powered_open
+      J4: spruce_planks
+      G4: dark_oak_planks
+      H4: acacia_planks
+      H2: thatch_vertical_thin_slab
+      I4: jungle_planks
+      A4: piston_sticky_extended_up
+      B4: piston_normal_extended_up
+      F4: crimson_planks
+      C2: trapdoor_dark_thatch_shingles
+      E4: dark_thatch_quarter_slab_upper
+      E3: dark_thatch_quarter_slab
+      E0: dark_thatch_vertical_thin_slab
+      D4: thatch_quarter_slab_upper
+      D3: thatch_quarter_slab
+  jungle_fence_gate_open:
+    itemMaterial: CLAY_BALL
+    cmd: 231
+    display: Thatch vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:jungle_fence_gate[facing=south,in_wall=false,open=true,powered=false]
+    blockDataWest: minecraft:jungle_fence_gate[facing=west,in_wall=false,open=true,powered=false]
+    blockDataNorth: minecraft:jungle_fence_gate[facing=north,in_wall=false,open=true,powered=false]
+    blockDataEast: minecraft:jungle_fence_gate[facing=east,in_wall=false,open=true,powered=false]
+    collection:
+      indirect: purpur_block
+  purpur_stairs:
+    itemMaterial: PURPUR_STAIRS
+    cmd: 0
+    display: Thatch Stair
+    type: VANILLA
+    collection:
+      indirect: purpur_block
+  half_slab_purpur:
+    itemMaterial: PURPUR_SLAB
+    cmd: 0
+    display: Thatch Slab
+    type: VANILLA
+    collection:
+      indirect: purpur_block
+  prismarine_bricks:
+    itemMaterial: PRISMARINE_BRICKS
+    cmd: 0
+    display: Dark Thatch
+    category: Roof
+    type: VANILLA
+    collection:
+      indirect: purpur_block
+  smooth_red_sandstone_stairs:
+    itemMaterial: SMOOTH_RED_SANDSTONE_STAIRS
+    cmd: 0
+    display: Dark Thatch Stairs
+    type: VANILLA
+    collection:
+      indirect: purpur_block
+  prismarine_brick_slab:
+    display: Dark Thatch Slab
+    type: BISECTED
+    itemMaterial: PRISMARINE_BRICK_SLAB
+    cmd: 0
+    blockData: minecraft:prismarine_brick_slab[type=bottom]
+    blockDataDown: minecraft:prismarine_brick_slab[type=bottom,waterlogged=false]
+    blockDataUp: minecraft:bamboo_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+  crimson_fence_gate_powered_open:
+    itemMaterial: CLAY_BALL
+    cmd: 430
+    display: Dark Thatch Vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataNorth: minecraft:crimson_fence_gate[facing=north,in_wall=false,open=true,powered=true]
+    blockDataSouth: minecraft:crimson_fence_gate[facing=south,in_wall=false,open=true,powered=true]
+    blockDataEast: minecraft:crimson_fence_gate[facing=east,in_wall=false,open=true,powered=true]
+    blockDataWest: minecraft:crimson_fence_gate[facing=west,in_wall=false,open=true,powered=true]
+    collection:
+      indirect: purpur_block
+  trapdoor_thatch_shingles:
+    itemMaterial: CLAY_BALL
+    cmd: 975
+    display: Thatch Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:bamboo_trapdoor[facing=north,half=top,open=false,powered=true,waterlogged=false]
+    blockDataDown: minecraft:bamboo_trapdoor[facing=north,half=bottom,open=false,powered=true,waterlogged=false]
+    collection:
+      indirect: purpur_block
+  trapdoor_dark_thatch_shingles:
+    itemMaterial: CLAY_BALL
+    cmd: 976
+    display: Dark Thatch Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:bamboo_trapdoor[facing=east,half=top,open=false,powered=true,waterlogged=false]
+    blockDataDown: minecraft:bamboo_trapdoor[facing=east,half=bottom,open=false,powered=true,waterlogged=false]
+    collection:
+      indirect: purpur_block
+  dark_thatch_vertical_thin_slab:
+    display: Dark Thatch Vertical Thin Slab
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 978
+    blockDataWest: minecraft:bamboo_trapdoor[facing=east,half=top,open=true,powered=false,waterlogged=false]
+    blockDataSouth: minecraft:bamboo_trapdoor[facing=north,half=top,open=true,powered=false,waterlogged=false]
+    blockDataNorth: minecraft:bamboo_trapdoor[facing=south,half=top,open=true,powered=false,waterlogged=false]
+    blockDataEast: minecraft:bamboo_trapdoor[facing=west,half=top,open=true,powered=false,waterlogged=false]
+    collection:
+      indirect: purpur_block
+  thatch_vertical_thin_slab:
+    display: Thatch Vertical Thin Slab
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 977
+    blockDataWest: minecraft:bamboo_trapdoor[facing=east,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataSouth: minecraft:bamboo_trapdoor[facing=north,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataNorth: minecraft:bamboo_trapdoor[facing=south,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataEast: minecraft:bamboo_trapdoor[facing=west,half=bottom,open=true,powered=false,waterlogged=false]
+    collection:
+      indirect: purpur_block
+  dark_thatch_quarter_slab_upper:
+    display: Dark Thatch Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 967
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=south,half=upper,hinge=right,open=true,powered=false]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=east,half=upper,hinge=right,open=true,powered=false]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=west,half=upper,hinge=right,open=true,powered=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=north,half=upper,hinge=right,open=true,powered=false]
+    collection:
+      indirect: purpur_block
+  dark_thatch_quarter_slab:
+    display: Dark Thatch Quarter Slab
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 968
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=east,half=upper,hinge=right,open=false,powered=false]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=north,half=upper,hinge=right,open=false,powered=false]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=south,half=upper,hinge=right,open=false,powered=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=west,half=upper,hinge=right,open=false,powered=false]
+    collection:
+      indirect: purpur_block
+  thatch_quarter_slab_upper:
+    display: Thatch Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 969
+    blockDataWest: minecraft:cherry_door[facing=south,half=upper,hinge=right,open=true,powered=false]
+    blockDataSouth: minecraft:cherry_door[facing=east,half=upper,hinge=right,open=true,powered=false]
+    blockDataNorth: minecraft:cherry_door[facing=west,half=upper,hinge=right,open=true,powered=false]
+    blockDataEast: minecraft:cherry_door[facing=north,half=upper,hinge=right,open=true,powered=false]
+    collection:
+      indirect: purpur_block
+  thatch_quarter_slab:
+    display: Thatch Quarter Slab
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 970
+    blockDataWest: minecraft:cherry_door[facing=east,half=upper,hinge=right,open=false,powered=false]
+    blockDataSouth: minecraft:cherry_door[facing=north,half=upper,hinge=right,open=false,powered=false]
+    blockDataNorth: minecraft:cherry_door[facing=south,half=upper,hinge=right,open=false,powered=false]
+    blockDataEast: minecraft:cherry_door[facing=west,half=upper,hinge=right,open=false,powered=false]
+    collection:
+      indirect: purpur_block
+  packed_mud:
+    itemMaterial: PACKED_MUD
+    cmd: 1
+    display: Canvas
+    category: Roof
+    type: VANILLA
+    collection:
+      A1: packed_mud_vert_slab
+      C2: packed_mud_vert_slab_thin
+      A0: packed_mud
+      B2: canvas_thin_slab
+      G2: canvas_slab
+      F4: spruce_planks
+      G4: dark_oak_planks
+      H4: jungle_planks
+      I4: purpur_block
+      A4: piston_sticky_extended_up
+      B4: piston_normal_extended_up
+      J4: acacia_planks
+      D2: canvas_quarter_up
+      E1: canvas_quarter_down
+  canvas_quarter_down:
+    itemMaterial: CLAY_BALL
+    cmd: 933
+    display: Canvas Quarter Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_door[facing=north,half=upper,hinge=right,open=false,powered=true]
+    blockDataWest: minecraft:cherry_door[facing=east,half=upper,hinge=right,open=false,powered=true]
+    blockDataNorth: minecraft:cherry_door[facing=south,half=upper,hinge=right,open=false,powered=true]
+    blockDataEast: minecraft:cherry_door[facing=west,half=upper,hinge=right,open=false,powered=true]
+    collection:
+      indirect: packed_mud
+  canvas_quarter_up:
+    itemMaterial: CLAY_BALL
+    cmd: 932
+    display: Canvas Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_door[facing=east,half=upper,hinge=right,open=true,powered=true]
+    blockDataWest: minecraft:cherry_door[facing=south,half=upper,hinge=right,open=true,powered=true]
+    blockDataNorth: minecraft:cherry_door[facing=west,half=upper,hinge=right,open=true,powered=true]
+    blockDataEast: minecraft:cherry_door[facing=north,half=upper,hinge=right,open=true,powered=true]
+    collection:
+      indirect: packed_mud
+  packed_mud_vert_slab_thin:
+    itemMaterial: CLAY_BALL
+    cmd: 931
+    display: Canvas Vertical Thin Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_trapdoor[facing=north,half=bottom,open=true,powered=true,waterlogged=false]
+    blockDataWest: minecraft:cherry_trapdoor[facing=east,half=bottom,open=true,powered=true,waterlogged=false]
+    blockDataNorth: minecraft:cherry_trapdoor[facing=south,half=bottom,open=true,powered=true,waterlogged=false]
+    blockDataEast: minecraft:cherry_trapdoor[facing=west,half=bottom,open=true,powered=true,waterlogged=false]
+    collection:
+      indirect: packed_mud
+  canvas_thin_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 929
+    display: Canvas Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:cherry_trapdoor[facing=north,half=top,open=false,powered=false,waterlogged=false]
+    blockDataDown: minecraft:cherry_trapdoor[facing=north,half=bottom,open=false,powered=false,waterlogged=false]
+    collection:
+      indirect: packed_mud
+  canvas_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 928
+    display: Canvas Slab
+    type: BISECTED
+    blockDataUp: minecraft:cherry_trapdoor[facing=east,half=top,open=false,powered=false,waterlogged=false]
+    blockDataDown: minecraft:cherry_trapdoor[facing=east,half=bottom,open=false,powered=false,waterlogged=false]
+    collection:
+      indirect: packed_mud
+  packed_mud_vert_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 930
+    display: Canvas Vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=false]
+    blockDataWest: minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=false]
+    blockDataNorth: minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=false]
+    blockDataEast: minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=false]
+    collection:
+      indirect: packed_mud
+  chiseled_resin_bricks:
+    itemMaterial: CHISELED_RESIN_BRICKS
+    cmd: 1
+    display: White Canvas
+    category: Roof
+    type: VANILLA
+    collection:
+      A1: chiseled_resin_bricks_vert_slab
+      C2: chiseled_resin_bricks_vert_slab_thin
+      A0: chiseled_resin_bricks
+      B2: chiseled_resin_bricks_thin_slab
+      G2: chiseled_resin_bricks_slab
+      F4: spruce_planks
+      G4: dark_oak_planks
+      H4: jungle_planks
+      I4: purpur_block
+      A4: piston_sticky_extended_up
+      B4: piston_normal_extended_up
+      J4: acacia_planks
+      D2: chiseled_resin_bricks_quarter_up
+      E1: chiseled_resin_bricks_quarter_down
+  chiseled_resin_bricks_quarter_up:
+    itemMaterial: CLAY_BALL
+    cmd: 937
+    display: White Canvas Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_door[facing=west,half=upper,hinge=left,open=true,powered=true]
+    blockDataWest: minecraft:cherry_door[facing=north,half=upper,hinge=left,open=true,powered=true]
+    blockDataNorth: minecraft:cherry_door[facing=east,half=upper,hinge=left,open=true,powered=true]
+    blockDataEast: minecraft:cherry_door[facing=south,half=upper,hinge=left,open=true,powered=true]
+    collection:
+      indirect: chiseled_resin_bricks
+  chiseled_resin_bricks_quarter_down:
+    itemMaterial: CLAY_BALL
+    cmd: 936
+    display: White Canvas Quarter Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_door[facing=north,half=upper,hinge=left,open=false,powered=true]
+    blockDataWest: minecraft:cherry_door[facing=east,half=upper,hinge=left,open=false,powered=true]
+    blockDataNorth: minecraft:cherry_door[facing=south,half=upper,hinge=left,open=false,powered=true]
+    blockDataEast: minecraft:cherry_door[facing=west,half=upper,hinge=left,open=false,powered=true]
+    collection:
+      indirect: chiseled_resin_bricks
+  chiseled_resin_bricks_vert_slab_thin:
+    itemMaterial: CLAY_BALL
+    cmd: 938
+    display: White Canvas Vertical Thin Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_trapdoor[facing=north,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataWest: minecraft:cherry_trapdoor[facing=east,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataNorth: minecraft:cherry_trapdoor[facing=south,half=bottom,open=true,powered=false,waterlogged=false]
+    blockDataEast: minecraft:cherry_trapdoor[facing=west,half=bottom,open=true,powered=false,waterlogged=false]
+    collection:
+      indirect: chiseled_resin_bricks
+  chiseled_resin_bricks_thin_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 939
+    display: White Canvas Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:cherry_trapdoor[facing=east,half=top,open=false,powered=true,waterlogged=false]
+    blockDataDown: minecraft:cherry_trapdoor[facing=east,half=bottom,open=false,powered=true,waterlogged=false]
+    collection:
+      indirect: chiseled_resin_bricks
+  chiseled_resin_bricks_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 940
+    display: White Canvas Slab
+    type: BISECTED
+    blockDataUp: minecraft:cherry_trapdoor[facing=south,half=top,open=false,powered=false,waterlogged=false]
+    blockDataDown: minecraft:cherry_trapdoor[facing=south,half=bottom,open=false,powered=false,waterlogged=false]
+    collection:
+      indirect: chiseled_resin_bricks
+  chiseled_resin_bricks_vert_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 941
+    display: White Canvas Vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=false]
+    blockDataWest: minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=false]
+    blockDataNorth: minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=false]
+    blockDataEast: minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=false]
+    collection:
+      indirect: chiseled_resin_bricks
+  resin_block:
+    itemMaterial: RESIN_BLOCK
+    cmd: 1
+    display: Red Canvas
+    category: Roof
+    type: VANILLA
+    collection:
+      A1: resin_block_vert_slab
+      C2: resin_block_vert_slab_thin
+      A0: resin_block
+      B2: resin_block_thin_slab
+      G2: resin_block_slab
+      F4: spruce_planks
+      G4: dark_oak_planks
+      H4: jungle_planks
+      I4: purpur_block
+      A4: piston_sticky_extended_up
+      B4: piston_normal_extended_up
+      J4: acacia_planks
+      D2: resin_block_quarter_up
+      E1: resin_block_quarter_down
+  resin_block_quarter_down:
+    itemMaterial: CLAY_BALL
+    cmd: 942
+    display: Red Canvas Quarter Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_door[facing=north,half=lower,hinge=right,open=false,powered=true]
+    blockDataWest: minecraft:cherry_door[facing=east,half=lower,hinge=right,open=false,powered=true]
+    blockDataNorth: minecraft:cherry_door[facing=south,half=lower,hinge=right,open=false,powered=true]
+    blockDataEast: minecraft:cherry_door[facing=west,half=lower,hinge=right,open=false,powered=true]
+    collection:
+      indirect: resin_block
+  resin_block_quarter_up:
+    itemMaterial: CLAY_BALL
+    cmd: 943
+    display: Red Canvas Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_door[facing=east,half=lower,hinge=right,open=true,powered=true]
+    blockDataWest: minecraft:cherry_door[facing=south,half=lower,hinge=right,open=true,powered=true]
+    blockDataNorth: minecraft:cherry_door[facing=west,half=lower,hinge=right,open=true,powered=true]
+    blockDataEast: minecraft:cherry_door[facing=north,half=lower,hinge=right,open=true,powered=true]
+    collection:
+      indirect: resin_block
+  resin_block_vert_slab_thin:
+    itemMaterial: CLAY_BALL
+    cmd: 944
+    display: Red Canvas Vertical Thin Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_trapdoor[facing=north,half=top,open=true,powered=false,waterlogged=false]
+    blockDataWest: minecraft:cherry_trapdoor[facing=east,half=top,open=true,powered=false,waterlogged=false]
+    blockDataNorth: minecraft:cherry_trapdoor[facing=south,half=top,open=true,powered=false,waterlogged=false]
+    blockDataEast: minecraft:cherry_trapdoor[facing=west,half=top,open=true,powered=false,waterlogged=false]
+    collection:
+      indirect: resin_block
+  resin_block_thin_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 945
+    display: Red Canvas Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:cherry_trapdoor[facing=north,half=top,open=false,powered=true,waterlogged=false]
+    blockDataDown: minecraft:cherry_trapdoor[facing=north,half=bottom,open=false,powered=true,waterlogged=false]
+    collection:
+      indirect: resin_block
+  resin_block_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 946
+    display: Red Canvas Slab
+    type: BISECTED
+    blockDataUp: minecraft:cherry_trapdoor[facing=west,half=top,open=false,powered=false,waterlogged=false]
+    blockDataDown: minecraft:cherry_trapdoor[facing=west,half=bottom,open=false,powered=false,waterlogged=false]
+    collection:
+      indirect: resin_block
+  resin_block_vert_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 947
+    display: Red Canvas Vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=false]
+    blockDataWest: minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=false]
+    blockDataNorth: minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=false]
+    blockDataEast: minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=false]
+    collection:
+      indirect: resin_block
+  waxed_chiseled_copper:
+    itemMaterial: WAXED_CHISELED_COPPER
+    cmd: 1
+    display: Blue Canvas
+    category: Roof
+    type: VANILLA
+    collection:
+      A1: waxed_chiseled_copper_vert_slab
+      C2: waxed_chiseled_copper_vert_slab_thin
+      A0: waxed_chiseled_copper
+      B2: waxed_chiseled_copper_thin_slab
+      G2: waxed_chiseled_copper_slab
+      F4: spruce_planks
+      G4: dark_oak_planks
+      H4: jungle_planks
+      I4: purpur_block
+      A4: piston_sticky_extended_up
+      B4: piston_normal_extended_up
+      J4: acacia_planks
+      D2: waxed_chiseled_copper_quarter_up
+      E1: waxed_chiseled_copper_quarter_down
+  waxed_chiseled_copper_quarter_down:
+    itemMaterial: CLAY_BALL
+    cmd: 951
+    display: Blue Canvas Quarter Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_door[facing=north,half=lower,hinge=left,open=false,powered=true]
+    blockDataWest: minecraft:cherry_door[facing=east,half=lower,hinge=left,open=false,powered=true]
+    blockDataNorth: minecraft:cherry_door[facing=south,half=lower,hinge=left,open=false,powered=true]
+    blockDataEast: minecraft:cherry_door[facing=west,half=lower,hinge=left,open=false,powered=true]
+    collection:
+      indirect: waxed_chiseled_copper
+  waxed_chiseled_copper_quarter_up:
+    itemMaterial: CLAY_BALL
+    cmd: 950
+    display: Blue Canvas Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_door[facing=west,half=lower,hinge=left,open=true,powered=true]
+    blockDataWest: minecraft:cherry_door[facing=north,half=lower,hinge=left,open=true,powered=true]
+    blockDataNorth: minecraft:cherry_door[facing=east,half=lower,hinge=left,open=true,powered=true]
+    blockDataEast: minecraft:cherry_door[facing=south,half=lower,hinge=left,open=true,powered=true]
+    collection:
+      indirect: waxed_chiseled_copper
+  waxed_chiseled_copper_vert_slab_thin:
+    itemMaterial: CLAY_BALL
+    cmd: 952
+    display: Blue Canvas Vertical Thin Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:cherry_trapdoor[facing=north,half=top,open=true,powered=true,waterlogged=false]
+    blockDataWest: minecraft:cherry_trapdoor[facing=east,half=top,open=true,powered=true,waterlogged=false]
+    blockDataNorth: minecraft:cherry_trapdoor[facing=south,half=top,open=true,powered=true,waterlogged=false]
+    blockDataEast: minecraft:cherry_trapdoor[facing=west,half=top,open=true,powered=true,waterlogged=false]
+    collection:
+      indirect: waxed_chiseled_copper
+  waxed_chiseled_copper_thin_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 953
+    display: Blue Canvas Thin Slab
+    type: BISECTED
+    blockDataUp: minecraft:cherry_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataDown: minecraft:cherry_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    collection:
+      indirect: waxed_chiseled_copper
+  waxed_chiseled_copper_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 954
+    display: Blue Canvas Slab
+    type: BISECTED
+    blockDataUp: minecraft:cherry_trapdoor[facing=south,half=top,open=false,powered=true,waterlogged=false]
+    blockDataDown: minecraft:cherry_trapdoor[facing=south,half=bottom,open=false,powered=true,waterlogged=false]
+    collection:
+      indirect: waxed_chiseled_copper
+  waxed_chiseled_copper_vert_slab:
+    itemMaterial: CLAY_BALL
+    cmd: 955
+    display: Blue Canvas Vertical Slab
+    type: FOUR_DIRECTIONS
+    blockDataSouth: minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=false]
+    blockDataWest: minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=false]
+    blockDataNorth: minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=false]
+    blockDataEast: minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=false]
+    collection:
+      indirect: waxed_chiseled_copper
+  orange_shingles_quarter_slab_upper:
+    display: Orange Shingles Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 995
+    blockDataDown: minecraft:copper_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=north,half=upper,hinge=left,open=true,powered=false]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=west,half=upper,hinge=left,open=true,powered=false]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=east,half=upper,hinge=left,open=true,powered=false]
+    blockDataUp: minecraft:copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=south,half=upper,hinge=left,open=true,powered=false]
+    collection:
+      indirect: jungle_planks
+  orange_shingles_quarter_slab:
+    display: Orange Shingles Quarter Slab
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 996
+    blockDataDown: minecraft:copper_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=east,half=upper,hinge=left,open=false,powered=false]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=north,half=upper,hinge=left,open=false,powered=false]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=south,half=upper,hinge=left,open=false,powered=false]
+    blockDataUp: minecraft:copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=west,half=upper,hinge=left,open=false,powered=false]
+    collection:
+      indirect: jungle_planks
+  wooden_shingles_quarter_slab_upper:
+    display: Wooden Shingles Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 997
+    blockDataDown: minecraft:copper_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=false]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=false]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=false]
+    blockDataUp: minecraft:copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=false]
+    collection:
+      indirect: crimson_planks
+  wooden_shingles_quarter_slab:
+    display: Wooden Shingles Quarter Slab
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 998
+    blockDataDown: minecraft:copper_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=false]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=false]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=false]
+    blockDataUp: minecraft:copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=false]
+    collection:
+      indirect: crimson_planks
+  gray_shingles_quarter_slab_upper:
+    display: Gray Shingles Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 1002
+    blockDataDown: minecraft:copper_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=false]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=false]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=false]
+    blockDataUp: minecraft:copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=false]
+    collection:
+      indirect: spruce_planks
+  gray_shingles_quarter_slab:
+    display: Gray Shingles Quarter Slab
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 1003
+    blockDataDown: minecraft:copper_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=false]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=false]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=false]
+    blockDataUp: minecraft:copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=false]
+    collection:
+      indirect: spruce_planks
+  blue_shingles_quarter_slab_upper:
+    display: Blue Shingles Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 1006
+    blockDataDown: minecraft:copper_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=true,powered=true]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=true,powered=true]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=true,powered=true]
+    blockDataUp: minecraft:copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=true,powered=true]
+    collection:
+      indirect: dark_oak_planks
+  blue_shingles_quarter_slab:
+    display: Blue Shingles Quarter Slab
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 1007
+    blockDataDown: minecraft:copper_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=east,half=lower,hinge=right,open=false,powered=true]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=north,half=lower,hinge=right,open=false,powered=true]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=south,half=lower,hinge=right,open=false,powered=true]
+    blockDataUp: minecraft:copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=west,half=lower,hinge=right,open=false,powered=true]
+    collection:
+      indirect: dark_oak_planks
+  green_shingles_quarter_slab_upper:
+    display: Green Shingles Quarter Slab Upper
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 1004
+    blockDataDown: minecraft:copper_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=true,powered=true]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=true,powered=true]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=true,powered=true]
+    blockDataUp: minecraft:copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=true,powered=true]
+    collection:
+      indirect: acacia_planks
+  green_shingles_quarter_slab:
+    display: Green Shingles Quarter Slab
+    type: FOUR_DIRECTIONS
+    itemMaterial: CLAY_BALL
+    cmd: 1005
+    blockDataDown: minecraft:copper_trapdoor[facing=west,half=top,open=false,powered=true,waterlogged=false]
+    blockDataWest: minecraft:waxed_exposed_copper_door[facing=east,half=lower,hinge=left,open=false,powered=true]
+    blockDataSouth: minecraft:waxed_exposed_copper_door[facing=north,half=lower,hinge=left,open=false,powered=true]
+    blockDataNorth: minecraft:waxed_exposed_copper_door[facing=south,half=lower,hinge=left,open=false,powered=true]
+    blockDataUp: minecraft:copper_trapdoor[facing=west,half=bottom,open=false,powered=true,waterlogged=false]
+    blockDataEast: minecraft:waxed_exposed_copper_door[facing=west,half=lower,hinge=left,open=false,powered=true]
+    collection:
+      indirect: acacia_planks

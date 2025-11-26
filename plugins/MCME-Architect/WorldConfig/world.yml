@@ -1,0 +1,2 @@
+WorldConfiguration: Values in this file will override values in defaultWorldConfig.yml
+  file.
