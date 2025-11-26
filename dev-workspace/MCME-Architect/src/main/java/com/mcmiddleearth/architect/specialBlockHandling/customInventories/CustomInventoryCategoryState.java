@@ -49,21 +49,32 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
     @Override
     public void update()  {
         super.update();
-        CustomInventoryCategory category = categories.get(categoryNames[currentCategory]);
-        int slotIndex=0;
-        if(category.isVisible(player)) {
-            slotIndex = CustomInventory.CATEGORY_SLOTS;
-            List<ItemStack> items = category.getItems();
-            for (int i = upperLeftItem; i < upperLeftItem + visibleItemSlots()
-                                      && i < items.size(); i++) {
-                    if(slotIndex==CustomInventory.CATEGORY_SLOTS+8 && !isFirstItemVisible()) { //leave pageUp slot empty if needed
-                        slotIndex++;
-                    }
-                    inventory.setItem(slotIndex, items.get(i));
-                    slotIndex++;
+        if(categories.get(categoryNames[currentCategory]).isVisible(player)) {
+            // Add persistent category navigation buttons in first column (slots 9, 18, 27, 36, 45)
+            addCategoryNavigationButtons();
+            
+            List<ItemStack> items = categories.get(categoryNames[currentCategory]).getItems();
+            int itemsPlaced = 0;
+            for (int slotIndex = CustomInventory.CATEGORY_SLOTS + 1; slotIndex < CustomInventory.CATEGORY_SLOTS + CustomInventory.ITEM_SLOTS; slotIndex++) {
+                // Skip first column of each row
+                if ((slotIndex - CustomInventory.CATEGORY_SLOTS) % 9 == 0) {
+                    continue;
                 }
+                // Skip pageUp slot if needed
+                if(slotIndex == CustomInventory.CATEGORY_SLOTS+8 && !isFirstItemVisible()) {
+                    continue;
+                }
+                // Skip pageDown slot if needed
+                if(slotIndex == CustomInventory.CATEGORY_SLOTS+CustomInventory.ITEM_SLOTS-1 && !isLastItemVisible()) {
+                    continue;
+                }
+                int itemIdx = upperLeftItem + itemsPlaced;
+                if(itemIdx < items.size() && itemsPlaced < visibleItemSlots()) {
+                    inventory.setItem(slotIndex, items.get(itemIdx));
+                    itemsPlaced++;
+                }
+            }
             if(!isFirstItemVisible()) {
-                //inventory.setItem(slotIndex, newPagingItem(pagingMaterial,pageUp, "page up"));
                 inventory.setItem(CustomInventory.CATEGORY_SLOTS+8,
                                   newPagingItem(pagingMaterial,pageUp, "page up"));
             }
@@ -115,15 +126,29 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
                 && !isLastItemVisible());
     }
     
+    public boolean isCategoryButtonSlot(int slot) {
+        return slot == 9 || slot == 18 || slot == 27 || slot == 36 || slot == 45;
+    }
+    
     private int visibleItemSlots() {
-        CustomInventoryCategory category = categories.get(categoryNames[currentCategory]);
-        if(category.size()<=CustomInventory.ITEM_SLOTS) {
-            return CustomInventory.ITEM_SLOTS;
-        } else  if(isFirstItemVisible() || isLastItemVisible()) {
-            return CustomInventory.ITEM_SLOTS-1;
-        } else {
-            return CustomInventory.ITEM_SLOTS-2;
+        // Count actual available slots, skipping first column and paging buttons
+        int availableSlots = 0;
+        for (int slotIndex = CustomInventory.CATEGORY_SLOTS + 1; slotIndex < CustomInventory.CATEGORY_SLOTS + CustomInventory.ITEM_SLOTS; slotIndex++) {
+            // Skip first column of each row (9, 18, 27, 36, 45)
+            if ((slotIndex - CustomInventory.CATEGORY_SLOTS) % 9 == 0) {
+                continue;
+            }
+            // Skip pageUp slot if needed
+            if(slotIndex == CustomInventory.CATEGORY_SLOTS+8 && !isFirstItemVisible()) {
+                continue;
+            }
+            // Skip pageDown slot if needed
+            if(slotIndex == CustomInventory.CATEGORY_SLOTS+CustomInventory.ITEM_SLOTS-1 && !isLastItemVisible()) {
+                continue;
+            }
+            availableSlots++;
         }
+        return availableSlots;
     }
     
     private boolean isFirstItemVisible() {
@@ -132,10 +157,11 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
     
     private boolean isLastItemVisible() {
         CustomInventoryCategory category = categories.get(categoryNames[currentCategory]);
-        if(category.size()<=CustomInventory.ITEM_SLOTS) {
+        final int USABLE_ITEM_SLOTS = 40;
+        if(category.size()<=USABLE_ITEM_SLOTS) {
             return true;
         } else {
-            return category.size() <= upperLeftItem + CustomInventory.ITEM_SLOTS-2;
+            return category.size() <= upperLeftItem + USABLE_ITEM_SLOTS-2;
         }
     }
 
@@ -144,6 +170,19 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
 
     protected int getUpperLeftItem() {
         return upperLeftItem;
+    }
+    
+    private void addCategoryNavigationButtons() {
+        // Add persistent category navigation buttons in slots 9, 18, 27, 36, 45
+        // Each slot gets its own unique custom model data (100-104) for visual distinction
+        int[] buttonSlots = {9, 18, 27, 36, 45};
+        int[] customModelData = {100, 101, 102, 103, 104};  // Unique values to avoid conflicts with paging buttons
+        String[] tooltips = {"Category Row 1", "Category Row 2", "Category Row 3", "Category Row 4", "Category Row 5"};
+        
+        for (int i = 0; i < buttonSlots.length; i++) {
+            ItemStack button = newPagingItem(pagingMaterial, customModelData[i], tooltips[i]);
+            inventory.setItem(buttonSlots[i], button);
+        }
     }
 
 }

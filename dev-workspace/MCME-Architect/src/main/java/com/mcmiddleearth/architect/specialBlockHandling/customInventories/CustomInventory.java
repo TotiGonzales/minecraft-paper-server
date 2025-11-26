@@ -197,6 +197,12 @@ public class CustomInventory implements Listener {
                 state.update();
                 return;
             }
+            // Block clicks on category button slots
+            if(state instanceof CustomInventoryCategoryState) {
+                if(((CustomInventoryCategoryState)state).isCategoryButtonSlot(event.getRawSlot())) {
+                    return;
+                }
+            }
             if(state instanceof CustomInventoryCollectionState) {
                 if(event.getRawSlot() == ((CustomInventoryCollectionState)state).getBackSlot()) {
                     state = new CustomInventoryCategoryState(state);
