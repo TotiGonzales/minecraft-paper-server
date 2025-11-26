@@ -94,8 +94,11 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
     
     @Override
     protected void setCategory(int newCategory) {
-        upperLeftItem = 0;
-        currentSubcategory = "All"; // Reset to "All" when switching categories
+        // Only reset subcategory if we're actually switching to a different category
+        if (currentCategory != newCategory) {
+            upperLeftItem = 0;
+            currentSubcategory = "All"; // Reset to "All" when switching categories
+        }
         super.setCategory(newCategory);
     }
     
@@ -182,6 +185,10 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
 
     protected int getUpperLeftItem() {
         return upperLeftItem;
+    }
+    
+    public String getCurrentSubcategory() {
+        return currentSubcategory;
     }
     
     public void setSubcategory(int buttonIndex) {
