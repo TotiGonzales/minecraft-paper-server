@@ -42,6 +42,10 @@ public class CustomInventoryCategory {
 
     private final boolean usesSubcategories;
     
+    private final Map<String, List<ItemStack>> itemsBySubcategory = new HashMap<>();
+    
+    private List<String> subcategoryNames = new ArrayList<>();
+    
     public CustomInventoryCategory(UUID owner, boolean isPublic, ItemStack categoryItem,
                                    ItemStack currentCategoryItem, boolean usesSubcategories) {
         //this.name = name;
@@ -55,6 +59,13 @@ public class CustomInventoryCategory {
     
     public void addItem(ItemStack item) {
         items.add(item);
+    }
+    
+    public void addItem(ItemStack item, String subcategory) {
+        items.add(item);
+        if(usesSubcategories && subcategory != null && !subcategory.isEmpty()) {
+            itemsBySubcategory.computeIfAbsent(subcategory, k -> new ArrayList<>()).add(item);
+        }
     }
     
     public void addPermission(String permission) {
@@ -119,6 +130,21 @@ public class CustomInventoryCategory {
     public List<ItemStack> getItems() {
         return items;
     }
+    
+    public List<ItemStack> getItemsBySubcategory(String subcategory) {
+        if("All".equals(subcategory) || subcategory == null) {
+            return items;
+        }
+        return itemsBySubcategory.getOrDefault(subcategory, new ArrayList<>());
+    }
 
     public boolean usesSubcategories() {return usesSubcategories;}
+    
+    public List<String> getSubcategoryNames() {
+        return subcategoryNames;
+    }
+    
+    public void setSubcategoryNames(List<String> names) {
+        this.subcategoryNames = names;
+    }
 }

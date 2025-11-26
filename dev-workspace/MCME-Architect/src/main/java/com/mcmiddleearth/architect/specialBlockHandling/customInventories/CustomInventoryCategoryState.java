@@ -30,6 +30,8 @@ import org.bukkit.inventory.ItemStack;
 public class CustomInventoryCategoryState extends CustomInventoryState {
     
     private int upperLeftItem;
+    
+    private String currentSubcategory = "All"; // Default to "All" to show all items
 
     public CustomInventoryCategoryState(Map<String, CustomInventoryCategory> categories, CustomInventoryCategory withoutCategory,
                                         Inventory inventory, Player player) {
@@ -49,11 +51,16 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
     @Override
     public void update()  {
         super.update();
-        if(categories.get(categoryNames[currentCategory]).isVisible(player)) {
+        CustomInventoryCategory category = categories.get(categoryNames[currentCategory]);
+        if(category.isVisible(player)) {
             // Add persistent category navigation buttons in first column (slots 9, 18, 27, 36, 45)
             addCategoryNavigationButtons();
             
-            List<ItemStack> items = categories.get(categoryNames[currentCategory]).getItems();
+            // Get items filtered by current subcategory
+            List<ItemStack> items = category.usesSubcategories() 
+                ? category.getItemsBySubcategory(currentSubcategory) 
+                : category.getItems();
+            
             int itemsPlaced = 0;
             for (int slotIndex = CustomInventory.CATEGORY_SLOTS + 1; slotIndex < CustomInventory.CATEGORY_SLOTS + CustomInventory.ITEM_SLOTS; slotIndex++) {
                 // Skip first column of each row
@@ -88,6 +95,7 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
     @Override
     protected void setCategory(int newCategory) {
         upperLeftItem = 0;
+        currentSubcategory = "All"; // Reset to "All" when switching categories
         super.setCategory(newCategory);
     }
     
@@ -157,11 +165,15 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
     
     private boolean isLastItemVisible() {
         CustomInventoryCategory category = categories.get(categoryNames[currentCategory]);
+        // Get the correct item count based on subcategory filtering
+        int itemCount = category.usesSubcategories() 
+            ? category.getItemsBySubcategory(currentSubcategory).size() 
+            : category.size();
         final int USABLE_ITEM_SLOTS = 40;
-        if(category.size()<=USABLE_ITEM_SLOTS) {
+        if(itemCount <= USABLE_ITEM_SLOTS) {
             return true;
         } else {
-            return category.size() <= upperLeftItem + USABLE_ITEM_SLOTS-2;
+            return itemCount <= upperLeftItem + USABLE_ITEM_SLOTS-2;
         }
     }
 
@@ -172,16 +184,59 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
         return upperLeftItem;
     }
     
+    public void setSubcategory(int buttonIndex) {
+        CustomInventoryCategory category = categories.get(categoryNames[currentCategory]);
+        if (buttonIndex == 0) {
+            currentSubcategory = "All";
+        } else {
+            List<String> subcategoryNames = category.getSubcategoryNames();
+            if (subcategoryNames != null && buttonIndex - 1 < subcategoryNames.size()) {
+                currentSubcategory = subcategoryNames.get(buttonIndex - 1);
+            }
+        }
+        upperLeftItem = 0; // Reset to first page when switching subcategories
+    }
+    
+    public int getSubcategoryButtonIndex(int slot) {
+        int[] buttonSlots = {9, 18, 27, 36, 45};
+        for (int i = 0; i < buttonSlots.length; i++) {
+            if (buttonSlots[i] == slot) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    
     private void addCategoryNavigationButtons() {
         // Add persistent category navigation buttons in slots 9, 18, 27, 36, 45
-        // Each slot gets its own unique custom model data (100-104) for visual distinction
+        // Each slot gets its own unique custom model data (100-104) for normal state
+        // and (105-109) for active/current state
         int[] buttonSlots = {9, 18, 27, 36, 45};
-        int[] customModelData = {100, 101, 102, 103, 104};  // Unique values to avoid conflicts with paging buttons
-        String[] tooltips = {"Category Row 1", "Category Row 2", "Category Row 3", "Category Row 4", "Category Row 5"};
+        int[] customModelData = {100, 101, 102, 103, 104};  // Normal state
+        int[] customModelDataCurrent = {105, 106, 107, 108, 109};  // Active state (washed out texture)
+        
+        CustomInventoryCategory category = categories.get(categoryNames[currentCategory]);
+        
+        // First button is always "All", remaining buttons use configured subcategory names
+        List<String> subcategoryNames = category.getSubcategoryNames();
+        String[] buttonNames = new String[5];
+        buttonNames[0] = "All";
+        for (int i = 1; i < 5; i++) {
+            if (subcategoryNames != null && i - 1 < subcategoryNames.size()) {
+                buttonNames[i] = subcategoryNames.get(i - 1);
+            } else {
+                buttonNames[i] = "";  // Empty if no subcategory defined
+            }
+        }
         
         for (int i = 0; i < buttonSlots.length; i++) {
-            ItemStack button = newPagingItem(pagingMaterial, customModelData[i], tooltips[i]);
-            inventory.setItem(buttonSlots[i], button);
+            if (!buttonNames[i].isEmpty()) {
+                // Check if this button represents the currently selected subcategory
+                boolean isCurrentSubcategory = buttonNames[i].equals(currentSubcategory);
+                int cmdValue = isCurrentSubcategory ? customModelDataCurrent[i] : customModelData[i];
+                ItemStack button = newPagingItem(pagingMaterial, cmdValue, buttonNames[i]);
+                inventory.setItem(buttonSlots[i], button);
+            }
         }
     }
 
