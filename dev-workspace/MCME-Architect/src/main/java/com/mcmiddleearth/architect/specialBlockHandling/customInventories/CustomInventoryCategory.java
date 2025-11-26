@@ -46,6 +46,8 @@ public class CustomInventoryCategory {
     
     private List<String> subcategoryNames = new ArrayList<>();
     
+    private Map<String, SubcategoryItemConfig> subcategoryItemConfigs = new HashMap<>();
+    
     public CustomInventoryCategory(UUID owner, boolean isPublic, ItemStack categoryItem,
                                    ItemStack currentCategoryItem, boolean usesSubcategories) {
         //this.name = name;
@@ -146,5 +148,31 @@ public class CustomInventoryCategory {
     
     public void setSubcategoryNames(List<String> names) {
         this.subcategoryNames = names;
+    }
+    
+    public Map<String, SubcategoryItemConfig> getSubcategoryItemConfigs() {
+        return subcategoryItemConfigs;
+    }
+    
+    public void setSubcategoryItemConfigs(Map<String, SubcategoryItemConfig> configs) {
+        this.subcategoryItemConfigs = configs;
+    }
+    
+    public static class SubcategoryItemConfig {
+        private final int cmd;
+        private final int cmdCurrent;
+        
+        public SubcategoryItemConfig(int cmd, int cmdCurrent) {
+            this.cmd = cmd;
+            this.cmdCurrent = cmdCurrent;
+        }
+        
+        public int getCmd() {
+            return cmd;
+        }
+        
+        public int getCmdCurrent() {
+            return cmdCurrent;
+        }
     }
 }

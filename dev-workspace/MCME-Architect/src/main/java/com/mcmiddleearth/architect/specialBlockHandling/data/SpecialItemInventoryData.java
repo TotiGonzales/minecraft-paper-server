@@ -115,7 +115,7 @@ public class SpecialItemInventoryData {
                 if(section.contains("damageCurrent")) {
                     currentCategoryItem.setDurability((short)section.getInt("damageCurrent"));
                 }
-                inventory.setCategoryItems(categoryKey, null, true, categoryItem, currentCategoryItem, false, new ArrayList<>());
+                inventory.setCategoryItems(categoryKey, null, true, categoryItem, currentCategoryItem, false, new ArrayList<>(), new HashMap<>());
             }
         }
         ConfigurationSection itemConfig = config.getConfigurationSection("Items");

@@ -58,7 +58,7 @@ public class SpecialHeadInventoryData {
         }
         createInventories();
         inventory.setCategoryItems("Blocks",null, true,
-                new ItemStack(Material.STONE), new ItemStack(Material.STONE),false, new ArrayList<>());
+                new ItemStack(Material.STONE), new ItemStack(Material.STONE),false, new ArrayList<>(), new HashMap<>());
         for(String name: CustomHeadManagerData.getCollection().getSubCollections().keySet()) {
             CustomHeadCollection collection = CustomHeadManagerData.getCollection()
                                                                    .getSubCollection(name);
@@ -74,7 +74,7 @@ public class SpecialHeadInventoryData {
                 inventory.setCategoryItems(name, null, true, 
                                            categoryItem.clone(),
                         CustomInventoryState.newPagingItem(CustomInventoryState.pagingMaterial,
-                                                 CustomInventoryState.pageDown, name),false, new ArrayList<>());
+                                                 CustomInventoryState.pageDown, name),false, new ArrayList<>(), new HashMap<>());
             }
         }
     }

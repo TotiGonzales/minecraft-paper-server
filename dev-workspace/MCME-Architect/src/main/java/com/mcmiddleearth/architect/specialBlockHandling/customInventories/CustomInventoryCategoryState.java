@@ -19,6 +19,7 @@ package com.mcmiddleearth.architect.specialBlockHandling.customInventories;
 import java.util.List;
 import java.util.Map;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -38,13 +39,23 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
         super(categories, withoutCategory, inventory, player);
         upperLeftItem = 0;
     }
+    
+    public CustomInventoryCategoryState(Map<String, CustomInventoryCategory> categories, CustomInventoryCategory withoutCategory,
+                                        Inventory inventory, Player player, String inventoryName) {
+        super(categories, withoutCategory, inventory, player, inventoryName);
+        upperLeftItem = 0;
+    }
 
     CustomInventoryCategoryState(CustomInventoryState state) {
-        this(state.categories,state.withoutCategory,state.inventory,state.player);
+        this(state.categories,state.withoutCategory,state.inventory,state.player,state.inventoryName);
         currentCategory = state.currentCategory;
         leftCategory = state.leftCategory;
         if(state instanceof CustomInventoryCollectionState collectionState) {
             upperLeftItem = collectionState.getReturnUpperLeftItem();
+            String returnSub = collectionState.getReturnSubcategory();
+            if(returnSub != null) {
+                currentSubcategory = returnSub;
+            }
         }
     }
     
@@ -53,6 +64,9 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
         super.update();
         CustomInventoryCategory category = categories.get(categoryNames[currentCategory]);
         if(category.isVisible(player)) {
+            // Update inventory title with category and subcategory
+            updateInventoryTitle();
+            
             // Add persistent category navigation buttons in first column (slots 9, 18, 27, 36, 45)
             addCategoryNavigationButtons();
             
@@ -214,15 +228,32 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
         return -1;
     }
     
+    @SuppressWarnings("deprecation")
+    private void updateInventoryTitle() {
+        String categoryName = categoryNames[currentCategory];
+        // Extract prefix from original inventory name (e.g., "MCME Blocks - Human" -> "Human")
+        String prefix = "";
+        if (inventoryName != null && inventoryName.contains(" - ")) {
+            String[] parts = inventoryName.split(" - ");
+            if (parts.length > 1) {
+                prefix = parts[1] + " - ";
+            }
+        }
+        String title = org.bukkit.ChatColor.DARK_GRAY + prefix + categoryName + " - " + currentSubcategory;
+        try {
+            player.getOpenInventory().setTitle(title);
+        } catch (Exception e) {
+            // Fallback if title update fails
+        }
+    }
+    
     private void addCategoryNavigationButtons() {
         // Add persistent category navigation buttons in slots 9, 18, 27, 36, 45
-        // Each slot gets its own unique custom model data (100-104) for normal state
-        // and (105-109) for active/current state
+        // Uses per-category custom model data from subcategoryItems configuration
         int[] buttonSlots = {9, 18, 27, 36, 45};
-        int[] customModelData = {100, 101, 102, 103, 104};  // Normal state
-        int[] customModelDataCurrent = {105, 106, 107, 108, 109};  // Active state (washed out texture)
         
         CustomInventoryCategory category = categories.get(categoryNames[currentCategory]);
+        Map<String, CustomInventoryCategory.SubcategoryItemConfig> itemConfigs = category.getSubcategoryItemConfigs();
         
         // First button is always "All", remaining buttons use configured subcategory names
         List<String> subcategoryNames = category.getSubcategoryNames();
@@ -240,7 +271,17 @@ public class CustomInventoryCategoryState extends CustomInventoryState {
             if (!buttonNames[i].isEmpty()) {
                 // Check if this button represents the currently selected subcategory
                 boolean isCurrentSubcategory = buttonNames[i].equals(currentSubcategory);
-                int cmdValue = isCurrentSubcategory ? customModelDataCurrent[i] : customModelData[i];
+                
+                // Get CMD values from configuration, with fallback defaults
+                CustomInventoryCategory.SubcategoryItemConfig config = itemConfigs.get(buttonNames[i]);
+                int cmdValue;
+                if (config != null) {
+                    cmdValue = isCurrentSubcategory ? config.getCmdCurrent() : config.getCmd();
+                } else {
+                    // Fallback to hardcoded defaults if not configured
+                    cmdValue = isCurrentSubcategory ? (105 + i) : (100 + i);
+                }
+                
                 ItemStack button = newPagingItem(pagingMaterial, cmdValue, buttonNames[i]);
                 inventory.setItem(buttonSlots[i], button);
             }
